@@ -8,13 +8,14 @@
 } 
 
 .linha {
-    float: center;
     margin: 20px;
     padding: 46px ;
+    display: inline-block;
+
 
 }
 .linha2 {
-    float: center;
+    display: inline-block;
      margin: 20px;
     padding: 46px ;
 }

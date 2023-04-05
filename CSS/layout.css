@@ -2,8 +2,8 @@
 body {
 
     /*background-image: url(/imagem/fundo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;*/
+    background-repeat: no-repeat;*/
+    background-size: cover;
     font-family: cursive;
     background-color: khaki;
     padding: 0px;
@@ -13,7 +13,6 @@ body {
 
 .cabecalho {
     padding: 30px;
-    text-align: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px ;
     background-color: crimson;
@@ -22,6 +21,7 @@ body {
 .cabecalho h1 {
     font-size: 50px;
     font-weight: normal;
+    text-align: center;
 }
 
 .topnav {
@@ -50,42 +50,39 @@ body {
     border-radius: 11px;
 }
 
-.principal {
-    width: 1028px;
-    margin: 0 auto;
-    text-align: left;
-}
-
 .nov {
     float: left;
-    width: 00px;
-    
 }
-.nov p {
-    text-align: center;
-}
-
 
 .nov img {
-    width: 500px;
-    padding: 20px;
-
+   width: 460px;
 }
 
-.linha{
-    margin-bottom: 20px;
-    background-color: rgb(253, 144, 1);
-    background-color: khaki;
-
- 
+.principal {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+.linha {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    background-color: burlywood;
 }
 
 .principal h1 {
- font-size: 45px;
+    padding: 40px;
+ font-size: 50px;
  font-weight: normal;
+ text-align: left;
+}
+.novo img {
+    width: 150px;
+    float:left;
 }
 
-.op img {
+.logo img {
     float: left;
     width: 150px;
 }
@@ -99,11 +96,10 @@ body {
     background-color:  rgb(238, 108, 68);
     margin-top: 20px;
 }
- .welcome {
+ .paginat {
     background-color:darkorange;
     padding: 60px;
     margin: 0px;
-
 
  }
 
@@ -111,10 +107,9 @@ body {
  background-color: rgba(255, 209, 5, 0.808);
  text-align: center;
 
-
  }
 
- .hpp img {
+ .pag2 img {
     width: 25%;
     padding: 20px;
  }
