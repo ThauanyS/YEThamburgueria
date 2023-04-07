@@ -5,7 +5,7 @@ body {
     background-repeat: no-repeat;*/
     background-size: cover;
     font-family: cursive;
-    background-color: khaki;
+    background-color:#ffcc41;
     padding: 0px;
     margin: 0px;
     font-weight: normal;
@@ -15,7 +15,7 @@ body {
     padding: 30px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px ;
-    background-color: crimson;
+    background-color: #f10101;
 }
 
 .cabecalho h1 {
@@ -26,7 +26,7 @@ body {
 
 .topnav {
     overflow: hidden;
-    background-color:rgb(255, 153, 0);
+    background-color:#ff771e;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     text-align: center;
@@ -44,9 +44,9 @@ body {
 }
 
 .topnav a:hover {
-    background-color:burlywood;
+    background-color:rgb(255, 72, 0);
     color: rgb(253, 253, 253);
-    border-bottom: solid 2px rgb(255, 255, 255);
+    border-bottom: solid 2px #ffff98;
     border-radius: 11px;
 }
 
@@ -65,10 +65,11 @@ body {
 }
 .linha {
     display: inline-block;
-    padding: 0px;
+    padding: 25px;
     margin: 0px;
     text-align: center;
-    background-color: burlywood;
+    background-color:#ffff98;
+    border-radius: 20px;
 }
 
 .principal h1 {
@@ -93,8 +94,12 @@ body {
 .footer {
     padding: 20px;
     text-align: center;
-    background-color:  rgb(238, 108, 68);
+    background-color:  rgb(245, 74, 74);
     margin-top: 20px;
+}
+
+.footer a, .footer p {
+    color: aliceblue;
 }
  .paginat {
     background-color:darkorange;

@@ -1,22 +1,101 @@
+body{
+   background-color:  #ffcc41;
+   font-family: cursive;
+   background-size: cover;
+   font-weight: normal;
+
+
+}
 .nov {
-    float: left;
-    width: 400px;
+    width: 250px;
+    display: inline-block;
+    margin: 40px;
 }
 
 .nov p {
     text-align: center;
-} 
+    font-size: 17px;
+    
+}
+
+.novt p {
+    text-align: center;
+    font-size: 17px;
+}
 
 .linha {
-    margin: 20px;
-    padding: 46px ;
-    display: inline-block;
-
+    margin: 0px;
+    padding: 0px;
+    margin: 40px;
+    background-color: #fefe65;
 
 }
+
+
 .linha2 {
-    display: inline-block;
-     margin: 20px;
-    padding: 46px ;
+    margin: 40px;
+    padding: 0px;
+    background-color: #fefe65;
 }
 
+.linha3 {
+    padding: 0px;
+    background-color: #fefe65;
+    margin: 40px;
+
+}
+.card img {
+    width: 85px;
+    float: left;
+}
+
+.card
+{
+    font-size: 25px;
+}
+.novt {
+    width: 250px;
+    display: inline-block;
+    margin: 47px;
+}
+.del {
+    width: 70px;
+    float: right;
+    margin: 13px;
+}
+.de {
+    width: 90px;
+    float: right;
+    margin: 13px;
+}
+.deli {
+    width: 145px;
+    float: right;
+}
+
+
+.topnav {
+    overflow: hidden;
+    background-color:#ff771e;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.topnav a {
+    display: inline-block;
+    color: whitesmoke;
+    padding: 12px 26px;
+    text-decoration: none;
+    text-align: right;
+    font-size: 14pt;
+}
+
+.topnav a:hover {
+    background-color:rgb(255, 72, 0);
+    color: rgb(253, 253, 253);
+    border-bottom: solid 2px #ffff98;
+    border-radius: 11px;
+}
