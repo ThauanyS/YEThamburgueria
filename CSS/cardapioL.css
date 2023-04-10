@@ -6,54 +6,72 @@ body{
 
 
 }
+
 .nov {
     width: 250px;
     display: inline-block;
-    margin: 40px;
+    margin: 49px;
+    text-align:right;
+    font-size: 17px;
 }
 
-.nov p {
-    text-align: center;
-    font-size: 17px;
-    
+.Link a {
+    text-decoration: none;
 }
 
 .novt p {
-    text-align: center;
+    text-align: right;
     font-size: 17px;
 }
 
 .linha {
-    margin: 0px;
     padding: 0px;
-    margin: 40px;
+    margin: 70px;
     background-color: #fefe65;
-
+    border: solid 2px #fce301;
+    border-radius: 10px;
 }
 
+.text {
+    text-align: center;
+    font-size: 19px;
+    font-weight:normal;
+    color:rgb(59, 1, 1);
+}
 
+.texti img {
+    float: left;
+    width: 90px;
+}
 .linha2 {
-    margin: 40px;
+    margin: 70px;
     padding: 0px;
     background-color: #fefe65;
+    border: solid 2px #fce301;
+    border-radius: 10px;
 }
 
+.linham{
+    background-color: #fff079;
+}
 .linha3 {
     padding: 0px;
     background-color: #fefe65;
-    margin: 40px;
+    margin: 70px;
+    border: solid 2px #fce301;
+    border-radius: 10px;
 
 }
 .card img {
-    width: 85px;
-    float: left;
+    width: 75px;
+    float:left;
 }
 
 .card
 {
     font-size: 25px;
 }
-.novt {
+.novt { 
     width: 250px;
     display: inline-block;
     margin: 47px;
@@ -82,6 +100,43 @@ body{
     text-align: center;
     position: sticky;
     top: 0;
+   
+}
+
+.novm img{
+    width: 340px;
+    
+}
+
+.novm {
+    display: inline-block;
+    margin: 28px;
+    padding: 0px;
+    text-align: center;
+}
+
+.novmi img{
+    width: 350px;
+    
+}
+.linham{
+margin: 60px;
+background-color: #e1ff60;
+padding: 0px;
+font-size: 17px;
+border: solid 2px #72a300;
+border-radius: 10px;
+}
+
+.molhopag{
+border: none;
+
+}
+
+.novmi {
+    display: inline-block;
+    margin: 59px;
+    text-align: center;
 }
 
 .topnav a {
@@ -98,4 +153,57 @@ body{
     color: rgb(253, 253, 253);
     border-bottom: solid 2px #ffff98;
     border-radius: 11px;
+}
+
+
+.novb img{
+    width: 302px;
+    
+}
+
+.novbI img {
+    width: 310px;
+}
+
+.novbl img{
+    width: 220px;
+
+    
+}
+
+.novbI {
+    display: inline-block;
+    margin: px;
+    padding: 0px;
+    text-align: center;
+}
+
+.novbl {
+    display: inline-block;
+    margin: 30px;
+    padding: 0px;
+    text-align: center;
+}
+
+.novb {
+    display: inline-block;
+    margin: 43px;
+    padding: 0px;
+    text-align: center;
+}
+
+
+.linhab{
+margin: 60px;
+background-color: #ffb158;
+padding: 0px;
+font-size: 17px;
+border: solid 2px #ff771e;
+border-radius: 10px;
+
+}
+
+.bebpag{
+border: none;
+
 }
