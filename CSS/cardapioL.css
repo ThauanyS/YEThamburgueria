@@ -2,7 +2,7 @@ body{
    background-color:  #ffcc41;
    background-size: cover;
    font-weight: normal;
-    
+
    padding: 0px;
    margin: 0px;
 }
@@ -32,6 +32,8 @@ body{
     background-color: #fefe65;
     border: solid 2px #fce301;
     border-radius: 10px;
+    width: 1200px;
+    height: 450px;
 }
 
 .text {
@@ -51,6 +53,8 @@ body{
     background-color: #fefe65;
     border: solid 2px #fce301;
     border-radius: 10px;
+    width: 1200px;
+    height: 450px;
 }
 
 .linham{
