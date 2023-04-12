@@ -4,7 +4,6 @@ body {
     /*background-image: url(/imagem/fundo.jpg);
     background-repeat: no-repeat;*/
     background-size: cover;
-    font-family: cursive;
     background-color:#ffcc41;
     padding: 0px;
     margin: 0px;
@@ -15,11 +14,11 @@ body {
     padding: 30px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px ;
-    background-color: #f10101;
+    background-color: #da0202;
 }
 
 .cabecalho h1 {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: normal;
     text-align: center;
 }
@@ -40,7 +39,7 @@ body {
     padding: 12px 26px;
     text-decoration: none;
     text-align: right;
-    font-size: 14pt;
+    font-size: 16pt;
 }
 
 .topnav a:hover {
@@ -59,8 +58,7 @@ body {
 }
 
 .principal {
-    padding: 0px;
-    margin: 0px;
+    padding-bottom: 60px;
     text-align: center;
 }
 .linha {
@@ -71,10 +69,12 @@ body {
     background-color:#ffff98;
     border-radius: 20px;
 }
-
+.principal p {
+    font-size: 22px;
+}
 .principal h1 {
     padding: 40px;
- font-size: 50px;
+ font-size: 60px;
  font-weight: normal;
  text-align: left;
 }
@@ -94,8 +94,8 @@ body {
 .footer {
     padding: 20px;
     text-align: center;
-    background-color:  rgb(245, 74, 74);
-    margin-top: 20px;
+    font-size: 18px;
+    background-color:  rgb(236, 41, 41);
 }
 
 .footer a, .footer p {
@@ -103,20 +103,32 @@ body {
 }
  .paginat {
     background-color:darkorange;
-    padding: 60px;
+    padding: 45px;
     margin: 0px;
+    padding-bottom: 12px ;
+    padding-top: 12px ;
+
 
  }
+
+ 
+
 
  .welcome h1 {
  background-color: rgba(255, 209, 5, 0.808);
  text-align: center;
-
+ font-size: 48px;
+ border-radius: 10px;
  }
 
+.pag2 p  {
+    text-align: center;
+    font-size: 25px;
+}
+
  .pag2 img {
-    width: 25%;
-    padding: 20px;
+    width: 50%;
+    margin-left: 290px;
  }
 
  

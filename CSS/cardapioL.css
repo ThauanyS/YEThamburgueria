@@ -1,10 +1,10 @@
 body{
    background-color:  #ffcc41;
-   font-family: cursive;
    background-size: cover;
    font-weight: normal;
 
-
+   padding: 0px;
+   margin: 0px;
 }
 
 .nov {
@@ -17,6 +17,7 @@ body{
 
 .Link a {
     text-decoration: none;
+    color: black;
 }
 
 .novt p {
@@ -34,7 +35,7 @@ body{
 
 .text {
     text-align: center;
-    font-size: 19px;
+    font-size: 22px;
     font-weight:normal;
     color:rgb(59, 1, 1);
 }
@@ -116,7 +117,7 @@ body{
 }
 
 .novmi img{
-    width: 350px;
+    width: 300px;
     
 }
 .linham{
@@ -145,7 +146,7 @@ border: none;
     padding: 12px 26px;
     text-decoration: none;
     text-align: right;
-    font-size: 14pt;
+    font-size: 16pt;
 }
 
 .topnav a:hover {
