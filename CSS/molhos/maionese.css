@@ -4,9 +4,7 @@ body{
     padding: 0px;
     
 }
-.principal {
-    padding-bottom: 200px;
-}
+
 body h1 {
     font-size: 70px;
 }
@@ -18,7 +16,7 @@ body h2 {
 }
 
 
-.stacker img {
+.mns img {
     margin-top: 70px;
     margin-right: 40px;
     float: right;
@@ -75,4 +73,8 @@ body h2 {
 
 .footer a, .footer p {
     color: aliceblue;
+}
+
+.principal {
+    padding-bottom: 200px;
 }
