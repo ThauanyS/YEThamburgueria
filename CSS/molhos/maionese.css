@@ -5,6 +5,7 @@ body{
     
 }
 .principal {
+    padding-top: 200px;
     padding-bottom: 300px;
 }
 body h1 {
@@ -34,16 +35,6 @@ body h2 {
     text-align: start;
     
 }
-.container {
-    display: flex;
-    justify-content: center;
-}
-.corpo {
-    margin-top: 90px;
-   width: 1349px;
-   height: 600px;
-}
-
 .ing h3{
   font-size: 40px;
 }
