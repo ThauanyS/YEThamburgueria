@@ -16,7 +16,19 @@ body{
    
 }
 
+<<<<<<< HEAD
 
+=======
+.container {
+    display: flex;
+    justify-content: center;
+}
+.corpo {
+    margin-top: 90px;
+   width: 1349px;
+   height: 600px;
+}
+>>>>>>> Emily
 
 body h1 {
     font-size: 70px;
