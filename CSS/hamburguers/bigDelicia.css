@@ -4,6 +4,13 @@ body{
     padding: 0px;
     
 }
+
+.novo img {
+    width: 150px;
+    float:right;
+    margin-right: 140px;
+    margin-top: 70px;
+}
 .principal {
     padding-bottom: 300px;
 }

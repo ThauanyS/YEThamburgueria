@@ -48,7 +48,10 @@ body {
     border-bottom: solid 2px #ffff98;
     border-radius: 11px;
 }
-
+.Link p, a {
+    text-decoration: none;
+    color: black;
+}
 .nov {
     float: left;
 }
@@ -68,6 +71,8 @@ body {
     text-align: center;
     background-color:#ffff98;
     border-radius: 20px;
+    text-decoration: none;
+    color: black;
 }
 .principal p {
     font-size: 22px;

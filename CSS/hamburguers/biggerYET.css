@@ -27,7 +27,12 @@ body h2 {
     font-weight: normal;
     font-size: 40px;
 }
-
+.novo img {
+    width: 150px;
+    float:right;
+    margin-right: 140px;
+    margin-top: 70px;
+}
 
 .bigY img {
     margin-top: 70px;
