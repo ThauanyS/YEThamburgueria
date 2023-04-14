@@ -106,16 +106,14 @@ body {
 .footer a, .footer p {
     color: aliceblue;
 }
- .paginat {
+
+.paginat {
     background-color:darkorange;
     padding: 45px;
     margin: 0px;
     padding-bottom: 12px ;
     padding-top: 12px ;
  }
-
- 
-
 
  .welcome h1 {
  background-color: rgba(255, 209, 5, 0.808);
