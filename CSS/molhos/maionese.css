@@ -5,39 +5,37 @@ body{
     
 }
 .principal {
-    padding-top: 200px;
-    padding-bottom: 300px;
+    padding-top: 40px;
+    padding-bottom: 480px;
 }
+
 body h1 {
-    font-size: 70px;
-    margin-top: 50px;
+    font-size: 80px;
 }
 body h2 {
- 
+    margin-left: 30px;
     font-weight: normal;
-    font-size: 23px;
+    font-size: 40px;
 }
-
 
 .mns img {
-   margin-top: 80px;
     float: right;
-    width: 600px;
+    width: 700px;
     border-radius: 50px;
-    padding: 0px;
+    margin-top: 40px;
 }
-
 .ing {
-    margin-top: 120px;
-    margin-left: 50px;
+    margin-top: 70px;
+    margin-left: 10px;
     padding: 0px;
-    font-size: 22px;
+    font-size: 30px;
     text-align: start;
     
 }
 .ing h3{
-  font-size: 40px;
+  font-size: 50px;
 }
+
 
 .topnav {
     overflow: hidden;
