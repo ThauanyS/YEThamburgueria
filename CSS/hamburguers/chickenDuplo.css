@@ -19,7 +19,7 @@ body{
 
 
 body h1 {
-    font-size: 70px;
+    font-size: 80px;
 }
 body h2 {
  
@@ -30,25 +30,22 @@ body h2 {
 
 
 .chicken img {
-    margin-top: 70px;
-    margin-right: 40px;
     float: right;
-    width: 650px;
+    width: 800px;
     border-radius: 50px;
-    padding: 0px;
 }
 
 .ing {
     margin-top: 70px;
     margin-left: 10px;
     padding: 0px;
-    font-size: 22px;
+    font-size: 30px;
     text-align: start;
     
 }
 
 .ing h3{
-  font-size: 40px;
+  font-size: 50px;
 }
 
 
@@ -90,5 +87,6 @@ body h2 {
 }
 
 .principal {
-    padding-bottom: 300px;
+    padding-top: 40px;
+    padding-bottom: 480px;
 }
