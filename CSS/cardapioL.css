@@ -140,11 +140,11 @@ body{
 margin: 60px;
 background-color: #e1ff60;
 padding: 0px;
-font-size: 17px;
+font-size: 24px;
 border: solid 2px #72a300;
 border-radius: 10px;
 width: 1300px;
-height: 800px;
+height: 900px;
 }
 
 .molhopag{
@@ -165,7 +165,11 @@ border: none;
     text-align: right;
     font-size: 16pt;
 }
-
+.linham h4 {
+    text-align:center ;
+    font-size: 25px;
+    font-weight:normal;
+}
 .topnav a:hover {
     background-color:rgb(255, 72, 0);
     color: rgb(253, 253, 253);
@@ -202,13 +206,21 @@ border: none;
 }
 .novbs {
     display: inline-block;
-    margin-left: 80px;
+    margin-left: 70px;
+}
 
+.novbu img {
+    width: 220px;
+    margin-left: 40px;
+}
 
+.novbu {
+    display: inline-block;
+    margin-left: 30px;
 }
 .novbl {
     display: inline-block;
-    margin-left: 79px;
+    margin-left: 70px;
     padding: 0px;
     text-align: center;
 }
@@ -226,7 +238,7 @@ border: none;
 margin: 60px;
 background-color: #ffb158;
 padding: 0px;
-font-size: 20px;
+font-size: 24px;
 border: solid 2px #ff771e;
 border-radius: 10px;
 width: 1300px;
