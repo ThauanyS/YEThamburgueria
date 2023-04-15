@@ -8,11 +8,11 @@ body{
 }
 
 .nov {
-    width: 250px;
+    width: 259px;
     display: inline-block;
     margin: 49px;
     text-align:end;
-    font-size: 19px;
+    font-size: 24px;
 }
 
 
@@ -23,7 +23,7 @@ body{
 
 .novt p {
     text-align: right;
-    font-size: 19px;
+    font-size: 24px;
 }
 
 .linha {
@@ -34,6 +34,8 @@ body{
     border-radius: 10px;
     width: 1250px;
     height: 450px;
+    
+
 }
 .container {
     display: flex;
@@ -86,7 +88,7 @@ body{
     font-size: 25px;
 }
 .novt { 
-    width: 250px;
+    width: 255px;
     display: inline-block;
     margin: 47px;
 }
