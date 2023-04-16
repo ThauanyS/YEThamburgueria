@@ -31,6 +31,12 @@ text-align: right;
     }
 
 
+ .container{
+        display: flex;
+        justify-content: center;
+    }
+
+
 
 
 .principal {
