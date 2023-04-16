@@ -8,7 +8,7 @@ body {
     background-color: #ff771e;  /*  cor de fundo */
     overflow: hidden;             /* deixar invisivel o que esta fora */
     border-bottom-left-radius: 10px ;  /* bottom: inferior, left: direita, radius: arredondar */
-    border-bottom-right-radius: 10px;  /* bottom: inferior, left: esquerda, radius: arredondar */
+    border-bottom-right-radius: 10px;  /* bottom: inferior, right: esquerda, radius: arredondar */
     text-align: center;  /* para centralizar o texto */
     position:sticky; /* fixar a barra de navegação durante a rolagem no topo */
     top:0; /* fixar a barra de navegação durante a rolagem no topo */
