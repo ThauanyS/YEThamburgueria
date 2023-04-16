@@ -1,0 +1,63 @@
+body {
+    background-color: #ffcc41;
+    padding: 0px;
+    margin: 0px;
+}
+
+.topnav{
+    background-color: #ff771e;  /*  cor de fundo */
+    overflow: hidden;             /* deixar invisivel o que esta fora */
+    border-bottom-left-radius: 10px ;  /* bottom: inferior, left: direita, radius: arredondar */
+    border-bottom-right-radius: 10px;  /* bottom: inferior, right: esquerda, radius: arredondar */
+    text-align: center;  /* para centralizar o texto */
+    position:sticky; /* fixar a barra de navegação durante a rolagem no topo */
+    top:0; /* fixar a barra de navegação durante a rolagem no topo */
+
+}
+
+.topnav a{   /*modificar especificadamente os textos*/
+    color:whitesmoke; /* mudar a cor do texto*/
+    text-decoration: none; /* tirar o sublinhado */
+font-size: 16pt;
+padding: 12px 16px; /* largura */
+display: inline-block; /* alinhar os textos */
+text-align: right;  /*alinhar no lado esquerdo*/
+
+}
+
+.topnav a:hover{ /* chamando a classe topnav para mudar os elementos*/
+background-color: rgb(255,72,0);
+border-bottom: solid 2px #ffff98; /* bordinha na parte de baixo nas barras de navegação*/
+border-radius: 11px; /*arrendodar as bordas*/
+}
+
+.info{
+    float: left ;
+   font-size: 35px;
+   
+}
+
+
+.principal{
+    font-size: 25px;
+    text-align: center;
+}
+
+
+.info img{
+    width: 300px;
+    border-radius: 50px;
+    margin: 150px;
+    height: 300px;
+    margin-bottom:0px ;
+    margin-top: 10px;
+    border:solid 9px rgb(255, 255, 255) ;
+}
+
+
+.linha{
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+}
+
