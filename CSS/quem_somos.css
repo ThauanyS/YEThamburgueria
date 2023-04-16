@@ -39,25 +39,43 @@ border-radius: 11px; /*arrendodar as bordas*/
 
 
 .principal{
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
+    padding-bottom: 200px;
 }
 
-
+.principal img{
+    float: left;
+    margin-left: 40px;
+}
 .info img{
-    width: 300px;
+    width: 305px;
     border-radius: 50px;
     margin: 150px;
-    height: 300px;
+    height: 320px;
     margin-bottom:0px ;
     margin-top: 10px;
     border:solid 9px rgb(255, 255, 255) ;
 }
 
+.txt {
+    margin: 50px;
+}
 
 .linha{
     display: inline-block;
     padding: 10px;
     text-align: center;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    background-color:  rgb(236, 41, 41);
+}
+
+.footer a, .footer p {
+    color: aliceblue;
 }
 

@@ -4,87 +4,45 @@ body {
     margin: 0px;
 }
 
-.cima{
-    background-color: #ff771e;  
-    overflow: hidden;             
-    border-bottom-left-radius: 10px ; 
-    border-bottom-right-radius: 10px; 
-    text-align: center;  
-    position:sticky; 
-    top:0; 
-   
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 400px;
 
 }
-
-
-
-.cima a{   
-    color:whitesmoke; 
-    text-decoration: none; 
-font-size: 16pt;
-padding: 12px 16px; 
-display: inline-block; 
-text-align: right; 
+.l img{
+    width: 60px;
 }
-
-.cima a:hover{ 
-    background-color: rgb(255,72,0);
-    border-bottom: solid 2px #ffff98; 
-    border-radius: 11px; 
-    }
-
-
- .container{
-        display: flex;
-        justify-content: center;
-        height: 400px;
-        
-    }
-
-
-
-
 .principal {
-    padding-bottom: 400px;
-    padding-top: 40px;
+    padding-bottom: 200px;
+   
 }
+
 body h1 {
     font-size: 50px;
     text-align: center;
 }
+
 body h2 {
- 
+
     margin-left: 30px;
     font-weight: normal;
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
-}
-
-
-.bigDel img {
-    float: right;
-    width: 800px;
-    border-radius: 50px;
 }
 
 .ing {
-    margin-top: 70px;
-    margin-left: 10px;
-    padding: 0px;
+
     font-size: 30px;
-    text-align: start;
     text-align: center;
-    margin: 0px;
-    
+
 }
 
-.ing h3{
-  font-size: 50px;
-}
 
 .topnav {
     overflow: hidden;
-    background-color:#ff771e;
+    background-color: #ff771e;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     text-align: center;
@@ -102,7 +60,7 @@ body h2 {
 }
 
 .topnav a:hover {
-    background-color:rgb(255, 72, 0);
+    background-color: rgb(255, 72, 0);
     color: rgb(253, 253, 253);
     border-bottom: solid 2px #ffff98;
     border-radius: 11px;
@@ -112,12 +70,10 @@ body h2 {
     padding: 20px;
     text-align: center;
     font-size: 18px;
-    background-color:  rgb(236, 41, 41);
+    background-color: rgb(236, 41, 41);
 }
 
-.footer a, .footer p {
+.footer a,
+.footer p {
     color: aliceblue;
 }
-
-
- 
