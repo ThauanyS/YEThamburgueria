@@ -1,0 +1,78 @@
+body{
+    background-color:  #fff079; 
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+body h1 {
+    font-size: 80px;
+}
+body h2 {
+ 
+    margin-left: 30px;
+    font-weight: normal;
+    font-size: 40px;
+}
+
+
+.churrasY img {
+    float: right;
+    width: 800px;
+    border-radius: 50px;
+}
+
+.ing {
+    margin-top: 70px;
+    margin-left: 10px;
+    padding: 0px;
+    font-size: 30px;
+    text-align: start;
+    
+}
+
+.ing h3{
+  font-size: 50px;
+}
+.principal {
+    padding-top: 40px;
+    padding-bottom: 480px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color:#ff771e;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.topnav a {
+    display: inline-block;
+    color: whitesmoke;
+    padding: 12px 26px;
+    text-decoration: none;
+    text-align: right;
+    font-size: 16pt;
+}
+
+.topnav a:hover {
+    background-color:rgb(255, 72, 0);
+    color: rgb(253, 253, 253);
+    border-bottom: solid 2px #ffff98;
+    border-radius: 11px;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    background-color:  rgb(236, 41, 41);
+}
+
+.footer a, .footer p {
+    color: aliceblue;
+}
+

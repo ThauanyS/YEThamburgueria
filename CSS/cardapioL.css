@@ -1,0 +1,265 @@
+body{
+   background-color:  #ffcc41;
+   background-size: cover;
+   font-weight: normal;
+
+   padding: 0px;
+   margin: 0px;
+}
+
+.nov {
+    width: 259px;
+    display: inline-block;
+    margin: 49px;
+    text-align:end;
+    font-size: 24px;
+}
+
+
+.Link p, a {
+    text-decoration: none;
+    color: black;
+}
+
+.novt p {
+    text-align: right;
+    font-size: 24px;
+}
+
+.linha {
+    padding: 0px;
+    margin: 70px;
+    background-color: #fefe65;
+    border: solid 2px #fce301;
+    border-radius: 10px;
+    width: 1250px;
+    height: 450px;
+    
+
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.text {
+    font-size: 22px;
+    font-weight:normal;
+    color:rgb(59, 1, 1);
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+
+.texti img {
+    float: right;
+    width: 100px;
+}
+.linha2 {
+    margin: 70px;
+    padding: 0px;
+    background-color: #fefe65;
+    border: solid 2px #fce301;
+    border-radius: 10px;
+    width: 1250px;
+    height: 450px;
+}
+
+.linham{
+    background-color: #fff079;
+}
+.linha3 {
+    padding: 0px;
+    background-color: #fefe65;
+    margin: 70px;
+    border: solid 2px #fce301;
+    border-radius: 10px;
+    width: 1250px;
+    height: 450px;
+
+}
+.card img {
+    width: 75px;
+    float:left;
+}
+
+.card
+{
+    font-size: 25px;
+}
+.novt { 
+    width: 255px;
+    display: inline-block;
+    margin: 47px;
+}
+.del {
+    width: 70px;
+    float: right;
+    margin: 13px;
+}
+.de {
+    width: 90px;
+    float: right;
+    margin: 13px;
+}
+.deli {
+    width: 145px;
+    float: right;
+}
+
+
+.topnav {
+    overflow: hidden;
+    background-color:#ff771e;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+   
+}
+
+.novm img{
+    width: 340px;
+    
+}
+
+.novm {
+    display: inline-block;
+    margin: 28px;
+    padding: 0px;
+}
+
+.novm p {
+    text-align: center;
+}
+
+.novmi img{
+    width: 300px;
+    
+}
+.linham{
+margin: 60px;
+background-color: #e1ff60;
+padding: 0px;
+font-size: 24px;
+border: solid 2px #72a300;
+border-radius: 10px;
+width: 1300px;
+height: 900px;
+}
+
+.molhopag{
+border: none;
+}
+
+.novmi {
+    display: inline-block;
+    text-align: center;
+    margin-left: 214px;
+}
+
+.topnav a {
+    display: inline-block;
+    color: whitesmoke;
+    padding: 12px 26px;
+    text-decoration: none;
+    text-align: right;
+    font-size: 16pt;
+}
+.linham h4 {
+    text-align:center ;
+    font-size: 25px;
+    font-weight:normal;
+}
+.topnav a:hover {
+    background-color:rgb(255, 72, 0);
+    color: rgb(253, 253, 253);
+    border-bottom: solid 2px #ffff98;
+    border-radius: 11px;
+}
+
+
+.novb img{
+    width: 302px;
+    
+}
+
+.novbI img {
+    width: 310px;
+}
+
+.novbl img{
+    width: 220px;
+    
+}
+
+.novbI {
+    display: inline-block;
+    padding: 0px;
+    text-align: center;
+}
+
+.novbs img {
+    width: 220px;
+    margin-left: 50px;
+
+
+}
+.novbs {
+    display: inline-block;
+    margin-left: 70px;
+}
+
+.novbu img {
+    width: 220px;
+    margin-left: 40px;
+}
+
+.novbu {
+    display: inline-block;
+    margin-left: 30px;
+}
+.novbl {
+    display: inline-block;
+    margin-left: 92px;
+    padding: 0px;
+    text-align: center;
+}
+
+.novb {
+    display: inline-block;
+    margin: 43px;
+    padding: 0px;
+    text-align: center;
+    
+}
+
+
+.linhab{
+margin: 60px;
+background-color: #ffb158;
+padding: 0px;
+font-size: 24px;
+border: solid 2px #ff771e;
+border-radius: 10px;
+width: 1300px;
+height: 1000px;
+}
+
+.bebpag{
+border: none;
+
+}
+
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    background-color:  rgb(236, 41, 41);
+}
+
+.footer a, .footer p {
+    color: aliceblue;
+}
