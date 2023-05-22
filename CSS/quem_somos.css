@@ -1,7 +1,29 @@
-body {
-    background-color: #ffcc41;
-    padding: 0px;
-    margin: 0px;
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+body .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
 }
 
 .topnav{
@@ -40,7 +62,6 @@ border-radius: 11px; /*arrendodar as bordas*/
 
 .principal{
     font-size: 30px;
-    text-align: center;
     padding-bottom: 200px;
 }
 
@@ -48,16 +69,39 @@ border-radius: 11px; /*arrendodar as bordas*/
     float: left;
     margin-left: 40px;
 }
+
 .info img{
-    width: 305px;
-    border-radius: 50px;
-    margin: 150px;
-    height: 320px;
-    margin-bottom:0px ;
-    margin-top: 10px;
-    border:solid 9px rgb(255, 255, 255) ;
+    width: 163px;
+    height: 170px;
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.623);
+    border-radius: 10%;
+    background-color: #ec5f00;
+    bottom: 0;
+    left: 20%;
+    bottom: 20px;
 }
 
+
+.info{
+    text-align: left;
+    margin-left: 200px;
+    padding: 50px;
+    background:#ffcc41;
+    backdrop-filter: blur(15px);
+    border: 1px solid #da4003;
+    border-radius: 20px;
+    width: 500px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+}
+
+.info p{
+    margin-top: 40px;
+    font-size: 22px;
+
+}
 .txt {
     margin: 50px;
 }

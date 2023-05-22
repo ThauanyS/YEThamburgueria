@@ -34,8 +34,8 @@ section .bg {
 
 .login{
     position: relative;
-    padding: 60px;
-    background: rgba(255, 255, 255, 0.178);
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.075);
     backdrop-filter: blur(15px);
     border: 1px solid #fff;
     border-bottom: 1px solid rgba(255,255,255,0.5);
@@ -47,16 +47,26 @@ section .bg {
     box-shadow: 0 25px 50px rgba(0,0,0,0.1);
 }
 
-.login h2 {
+.login p {
     position: relative;
     width: 100%;
     text-align: center;
-    font-size: 2.5em;
-    font-weight: 600;
-    color: #880000;
-    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight:normal;
+    color: whitesmoke;
+    margin-bottom: 30px;
 }
-
+.card-avatar {
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.623);
+    border-radius: 50%;
+    background-color: #ec5f00;
+    position: relative;
+    bottom: 0;
+    left: 40%;
+    bottom: 20px;
+  }
 .login .inputBox{
     position: relative;
 }
@@ -76,7 +86,7 @@ section .bg {
     color: #8f2c24;
 }
 
-.login .inputBox #btn {
+.login button {
     position: relative;
     border: none;
     outline: none;
@@ -88,21 +98,35 @@ section .bg {
     transition: 0.5s;
     
 }
-    
-.login .inputBox #btn:hover {
+  button {
+    position: relative;
+
+    width: 100%;
+    padding: 15px 20px;
+    outline: none;
+    font-size: 1.25em ;
+    color: #cf4200;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 30px;
+    outline: none;
+    background: #ec5f00;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.25em;
+    font-weight: 500;
+    transition: 0.5s;
+
+  }  
+.login button:hover {
     background: #d64c42;
     
 }
-    
 
-
-
-   
 
 .topnav {
     overflow: hidden;
     background-color:#ff771e;
-
     text-align: center;
     position: sticky;
     top: 0;
