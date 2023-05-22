@@ -1,16 +1,31 @@
 
-body {
 
-   
-    background-size: cover;
-    background-color:#ffcc41;
-    padding: 0px;
-    margin: 0px;
-    font-weight: normal;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Lato', sans-serif;
 }
 
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+body .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
 .cabecalho {
-    padding: 30px;
+    padding: 80px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px ;
     background-color: #da0202;
@@ -61,16 +76,21 @@ body {
 }
 
 .principal {
-    padding-bottom: 60px;
+    padding-bottom: 200px;
     text-align: center;
+    margin-top: 50px;
+
 }
 .linha {
     display: inline-block;
-    padding: 25px;
-    margin: 0px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-top: 20px;
     text-align: center;
-    background-color:#ffff98;
+    background-color:#fc500059;
     border-radius: 20px;
+    border: solid 2px #ffffff;
     text-decoration: none;
     color: black;
 }
@@ -111,8 +131,8 @@ body {
     background-color:darkorange;
     padding: 45px;
     margin: 0px;
-    padding-bottom: 12px ;
-    padding-top: 12px ;
+    padding-bottom: 100px ;
+    padding-top: 80px ;
  }
 
  .welcome h1 {
@@ -120,16 +140,21 @@ body {
  text-align: center;
  font-size: 48px;
  border-radius: 10px;
+ padding: 10px ;
  }
 
 .pag2 p  {
     text-align: center;
     font-size: 25px;
+
 }
 
  .pag2 img {
     width: 50%;
     margin-left: 290px;
+    margin-bottom: 20px ;
+    margin-top: 30px ;
+
  }
 
  

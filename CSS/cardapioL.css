@@ -1,10 +1,27 @@
-body{
-   background-color:  #ffcc41;
-   background-size: cover;
-   font-weight: normal;
 
-   padding: 0px;
-   margin: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Lato', sans-serif;
+}
+
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+body .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
 }
 
 .nov {
@@ -34,7 +51,8 @@ body{
     border-radius: 10px;
     width: 1250px;
     height: 450px;
-    
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
+
 
 }
 .container {
@@ -63,10 +81,14 @@ body{
     border-radius: 10px;
     width: 1250px;
     height: 450px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
+
 }
 
 .linham{
     background-color: #fff079;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
+
 }
 .linha3 {
     padding: 0px;
@@ -75,6 +97,8 @@ body{
     border: solid 2px #fce301;
     border-radius: 10px;
     width: 1250px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
+
     height: 450px;
 
 }
@@ -147,6 +171,8 @@ border: solid 2px #72a300;
 border-radius: 10px;
 width: 1300px;
 height: 900px;
+box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
+
 }
 
 .molhopag{
@@ -232,7 +258,6 @@ border: none;
     margin: 43px;
     padding: 0px;
     text-align: center;
-    
 }
 
 
@@ -244,6 +269,7 @@ font-size: 24px;
 border: solid 2px #ff771e;
 border-radius: 10px;
 width: 1300px;
+box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
 height: 1000px;
 }
 
