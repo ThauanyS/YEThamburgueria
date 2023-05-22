@@ -5,7 +5,7 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 font-family: 'Lato', sans-serif;
-}
+    }
 
 section{
     position: relative;
@@ -34,7 +34,8 @@ pointer-events: none;
     width: 60px;
 }
 .principal {
-    padding-bottom: 200px;
+    padding-bottom: 239px;
+    padding-top: 50px;
    
 }
 

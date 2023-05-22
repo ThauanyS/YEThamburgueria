@@ -86,6 +86,21 @@ section .bg {
     color: #8f2c24;
 }
 
+.login .inputBox textarea{
+    position: relative;
+    width: 100%;
+    padding: 15px 20px;
+    outline: none;
+    font-size: 1.25em ;
+    color: #cf4200;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 30px;
+}
+.login .inputBox textarea ::placeholder{
+    color: #8f2c24;
+}
+
 .login button {
     position: relative;
     border: none;
