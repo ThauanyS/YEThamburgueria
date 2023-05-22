@@ -53,7 +53,7 @@ section .bg {
     text-align: center;
     font-size: 2.5em;
     font-weight: 600;
-    color: #8f2c24;
+    color: #880000;
     margin-bottom: 10px;
 }
 
@@ -67,7 +67,7 @@ section .bg {
     padding: 15px 20px;
     outline: none;
     font-size: 1.25em ;
-    color: #8f2c24;
+    color: #cf4200;
     border-radius: 5px;
     border: none;
     margin-bottom: 30px;
@@ -80,7 +80,7 @@ section .bg {
     position: relative;
     border: none;
     outline: none;
-    background: #8f2c24;
+    background: #ec5f00;
     color: #fff;
     cursor: pointer;
     font-size: 1.25em;
@@ -94,22 +94,9 @@ section .bg {
     
 }
     
-.login .group {
-    display: flex;
-    justify-content: space-between;
- 
-}
-    
-.login .group a {
-    font-size: 1.25em;
-    color: #8f2c24;
-    font-weight: 500;
-    text-decoration: none;
-}
-    
-.login .group a:nth-child(2){
-    text-decoration: underline;
-}
+
+
+
    
 
 .topnav {
