@@ -109,6 +109,7 @@ body .bg {
 
 .card
 {
+    margin-top: 20px;
     font-size: 25px;
 }
 .novt { 
@@ -150,7 +151,8 @@ body .bg {
 
 .novm {
     display: inline-block;
-    margin: 28px;
+    margin-left: 28px;
+    margin-top: 70px;
     padding: 0px;
 }
 
@@ -163,9 +165,9 @@ body .bg {
     
 }
 .linham{
-margin: 60px;
+margin: 90px;
 background-color: #e1ff60;
-padding: 0px;
+padding: 40px;
 font-size: 24px;
 border: solid 2px #72a300;
 border-radius: 10px;
@@ -182,7 +184,7 @@ border: none;
 .novmi {
     display: inline-block;
     text-align: center;
-    margin-left: 214px;
+    margin-left: 170px;
 }
 
 .topnav a {
@@ -228,35 +230,34 @@ border: none;
 
 .novbs img {
     width: 220px;
-    margin-left: 50px;
+    margin-left: 90px;
 
 
 }
 .novbs {
     display: inline-block;
-    margin-left: 70px;
+    margin-left: 50px;
 }
 
 .novbu img {
     width: 220px;
-    margin-left: 40px;
+    margin-left: 50px;
 }
 
 .novbu {
     display: inline-block;
-    margin-left: 30px;
+    margin-left: 22px;
 }
 .novbl {
     display: inline-block;
-    margin-left: 92px;
+    margin-left:55px;
     padding: 0px;
     text-align: center;
 }
 
 .novb {
     display: inline-block;
-    margin: 43px;
-    padding: 0px;
+    margin: 30px;
     text-align: center;
 }
 
@@ -270,7 +271,7 @@ border: solid 2px #ff771e;
 border-radius: 10px;
 width: 1300px;
 box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
-height: 1000px;
+height: 900px;
 }
 
 .bebpag{
