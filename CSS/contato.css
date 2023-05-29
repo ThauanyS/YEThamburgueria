@@ -30,8 +30,6 @@ section .bg {
 }
 
 
-
-
 .login{
     position: relative;
     padding: 50px;
@@ -136,6 +134,11 @@ section .bg {
 .login button:hover {
     background: #d64c42;
     
+}
+
+label {
+    color: whitesmoke;
+     font-size: 22px;
 }
 
 
