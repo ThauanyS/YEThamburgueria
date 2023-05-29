@@ -31,21 +31,21 @@
 
             <div class="inputBox">
                 <label for="lbl">Nome</label>
-                <input type="text" placeholder="Digite seu nome." required>
+                <input type="text" id="Nome" Name="Nome" placeholder="Digite seu nome." required><span class="mensagem-erro"  data-erro></span>
             </div>
             <div class="inputBox">
                 <label for="lbl">E-mail</label>
-                <input type="text" placeholder="Digite seu email." required>
+                <input type="text" placeholder="Digite seu email." required><span class="mensagem-erro" data-erro></span>
             </div>
 
             <div class="inputBox">
                 <label for="lbl">Telefone</label>
-                <input type="text" placeholder="(00) 00000-0000" maxlength="11" minlength="10" required pattern="[0-11]{(2)} [0-11]{5} [0-11]{4}">
+                <input type="text" placeholder="(00) 00000-0000" maxlength="11" minlength="10" required pattern="[0-11]{(2) [0-11]{5} [0-11]{4}"><span class="mensagem-erro" data-erro></span>
             </div>
 
             <div class="inputBox">
                 <label for="lbl">Assunto</label>
-                <textarea placeholder="..." id="assuntoId" style="height: 100px" required></textarea>
+                <textarea placeholder="..." id="assuntoId" style="height: 120px" required></textarea>
             </div>
 
             <button class="btn" id="btnId" type="button">Enviar</button>
