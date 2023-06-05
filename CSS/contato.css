@@ -39,7 +39,7 @@ section .bg {
     height: 550px;
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-bottom: 300px;
     box-shadow: 0 25px 50px rgba(0,0,0,0.1);
 }
