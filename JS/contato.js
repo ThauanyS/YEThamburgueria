@@ -56,6 +56,11 @@ function submitForm(event) {
   
     messageBox.innerHTML = "Formulário enviado com sucesso!";
     messageBox.className = "message success";
+    
+    setTimeout(function() {
+        messageBox.innerHTML = "";
+        messageBox.className = "message";
+      }, 3000);
   }
   
 const form = document.getElementById("myForm");
