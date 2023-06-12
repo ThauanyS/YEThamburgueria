@@ -67,12 +67,12 @@ body {
     /* Define o espaçamento a esquerda */
 }
 
-form {
+form#myform {
     width: 400px;
     /* Define a largura como 320px */
     padding: 25px 25px;
     /* Define o preenchimento interno */
-    background: rgba(255, 255, 255, 0.075);
+    background:#ec5e002a;
     /* Define o fundo com uma cor semitransparente */
     border: 1px solid #ccc;
     /* Define uma borda sólida com cor cinza */
@@ -84,8 +84,8 @@ form {
 
 form p {
     text-align: center;
-    font-size: 17px;
-    color: white;
+    font-size: 20px;
+    color:black;
     margin-bottom: 10px;
 }
 
@@ -97,7 +97,7 @@ form label {
     font-size: 15px;
     /* Define o tamanho da fonte */
     margin-left: 20px;
-    color: white;
+    color: black;
 
 }
 

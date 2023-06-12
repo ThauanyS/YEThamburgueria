@@ -16,7 +16,6 @@ function validaCampo(campo){
         }
     }
 }
-
 const textarea = document.getElementById("mensagem");
 const charCount = document.getElementById("charCount");
 const maxLength = 300; 
@@ -27,6 +26,7 @@ textarea.addEventListener("input", function() {
   
   charCount.textContent = `Máximo de caracteres: ${remainingLength}`;
 });
+
 function submitForm(event) {
     event.preventDefault();
   

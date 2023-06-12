@@ -27,15 +27,29 @@ pointer-events: none;
 .container {
     display: flex;
     justify-content: center;
-    height: 400px;
+    align-items: center;
+    margin-top: 50px;
+  
 
 }
 .l img{
     width: 60px;
 }
 .principal {
-    padding-bottom: 239px;
-    padding-top: 50px;
+  
+ 
+        width: 1000px;
+        /* Define a largura como 320px */
+        /* Define o preenchimento interno */
+        background:#ec5e002a;
+        /* Define o fundo com uma cor semitransparente */
+        border: 1px solid #ccc;
+        /* Define uma borda sólida com cor cinza */
+        border-radius: 5px;
+        /* Define as bordas arredondadas */
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.658);
+        margin-bottom: 10%;
+
    
 }
 

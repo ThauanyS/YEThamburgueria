@@ -1,39 +1,37 @@
-<!DOCTYPE html>
-<html>
 
-<link rel="stylesheet" href="/CSS/contato.css">
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
-    <title>Formulário de Pedido - Hamburgueria</title>
-    <script>
-        function atualizarResumo() {
-            // Obter os elementos selecionados pelo cliente
-            var hamburgueres = document.getElementById("hamburgueres").value;
-            var bebida = document.getElementById("bebida").value;
-            var endereco = document.getElementById("endereco").value;
-
-            // Construir o resumo do pedido
-            var resumo = "<strong>Hambúrgueres:</strong> " + hamburgueres + "<br>";
-            resumo += "<strong>Bebida:</strong> " + bebida + "<br>";
-            resumo += "<strong>Endereço:</strong> " + endereco;
-
-            // Atualizar o conteúdo do elemento 'resumo'
-            document.getElementById("resumo").innerHTML = resumo;
-        }
-    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/contato.css">
+    <link rel="icon" href="/imagem/YTE.jpg">
+    <title>Contato</title>
 </head>
 
 <body>
-    <h1>Formulário de Pedido - Hamburgueria</h1>
 
-    <form action="processar_pedido.php" method="POST">
+    <nav class="topnav">
+        <a href="index.html">Home</a>
+        <a href="quem_somos.html">Quem somos</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="promocao_do_dia.html">Promoção do Dia</a>
+        <a href="contato.html"> Contato</a>
+    </nav>
+
+    <h1>Formulário de Pedido - Hamburgueria</h1>
+    <div class="container">
+
+    <form id="myForm">
         <!-- Restante do formulário -->
 
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required><br><br>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
 
         <label for="hamburgueres">Hambúrgueres:</label>
         <input type="text" id="hamburgueres" name="hamburgueres" required><br><br>
@@ -49,41 +47,69 @@
         <label for="ketchup">Ketchup</label><br>
 
         <input type="checkbox" id="maionese" name="molhos[]" value="Maionese">
-        <label for="maionese">Maionese</label><br>
+        <label for="maionese">Maionese Temperada</label><br>
 
         <input type="checkbox" id="mostarda" name="molhos[]" value="Mostarda">
         <label for="mostarda">Mostarda</label><br>
 
+        <input type="checkbox" id="barbecue" name="molhos[]" value="Barbecue">
+        <label for="barbecue">Barbecue</label><br>
+
+        <input type="checkbox" id="alho" name="molhos[]" value="Alho">
+        <label for="alho">Molho de Alho</label><br>
+
         <label for="observacoes">Observações:</label><br>
         <textarea id="observacoes" name="observacoes" rows="4" cols="50"></textarea><br><br>
-  <h2>Retirada ou Entrega:</h2>
-    <input type="radio" id="retirada" name="retirada-entrega" value="Retirada" required>
-    <label for="retirada">Retirada</label><br>
+        <h2>Retirada ou Entrega:</h2>
+        <input type="radio" id="retirada" name="retirada-entrega" value="Retirada" required>
+        <label for="retirada">Retirada</label><br>
 
-    <input type="radio" id="entrega" name="retirada-entrega" value="Entrega">
-    <label for="entrega">Entrega</label><br><br>
+        <input type="radio" id="entrega" name="retirada-entrega" value="Entrega">
+        <label for="entrega">Entrega</label><br><br>
 
-    <h2>Opções de Ingredientes Adicionais:</h2>
-    <input type="checkbox" id="bacon" name="ingredientes-adicionais" value="Bacon">
-    <label for="bacon">Bacon</label><br>
+        <h2>Opções de Ingredientes Adicionais:</h2>
+        <input type="checkbox" id="bacon" name="ingredientes-adicionais" value="Bacon">
+        <label for="bacon">Bacon</label><br>
 
-    <input type="checkbox" id="cebola" name="ingredientes-adicionais" value="Cebola Caramelizada">
-    <label for="cebola">Cebola Caramelizada</label><br>
+        <input type="checkbox" id="cebola" name="ingredientes-adicionais" value="Cebola Caramelizada">
+        <label for="cebola">Cebola Caramelizada</label><br>
 
-    <input type="checkbox" id="cogumelos" name="ingredientes-adicionais" value="Cogumelos">
-    <label for="cogumelos">Cogumelos</label><br><br>
-    <h2>Forma de Pagamento:</h2>
-    <select id="forma-pagamento" name="forma-pagamento" required>
-      <option value="Cartão">Cartão de Crédito</option>
-      <option value="Dinheiro">Dinheiro</option>
-    </select><br><br>
-    
+        <input type="checkbox" id="cogumelos" name="ingredientes-adicionais" value="Cogumelos">
+        <label for="cogumelos">Cogumelos</label><br><br>
+
+        <h2>Forma de Pagamento:</h2>
+        <select id="forma-pagamento" name="forma-pagamento" required>
+            <option value="Crédito">Cartão de Crédito</option>
+            <option value="Dinheiro">Dinheiro</option>
+            <option value="Débito">Cartão de Débito</option>
+            <option value="Pix">Pix</option>
+
+        </select><br><br>
+
         <h2>Resumo do Pedido:</h2>
         <div id="resumo"></div><br><br>
 
         <button type="button" onclick="atualizarResumo()">Atualizar Resumo</button>
-        <input type="submit" value="Enviar Pedido">
+        <button type="submit">Enviar Pedido</button>
     </form>
+    </div>
+
+    <script>
+        function atualizarResumo() {
+            // Obter os elementos selecionados pelo cliente
+            var hamburgueres = document.getElementById("hamburgueres").value;
+            var bebida = document.getElementById("bebida").value;
+            var endereco = document.getElementById("endereco").value;
+
+            // Construir o resumo do pedido
+            var resumo = "<strong>Hambúrgueres:</strong> " + hamburgueres + "<br>";
+            resumo += "<strong>Bebida:</strong> " + bebida + "<br>";
+            resumo += "<strong>Endereço:</strong> " + endereco;
+            
+            // Atualizar o conteúdo do elemento 'resumo'
+            document.getElementById("resumo").innerHTML = resumo;
+        }
+    </script>
 
 </body>
 
