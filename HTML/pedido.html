@@ -1,120 +1,90 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
+
+<link rel="stylesheet" href="/CSS/contato.css">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/contato.css">
-    <link rel="icon" href="/imagem/YTE.jpg">
-    <title>Pedido</title>
+    <title>Formulário de Pedido - Hamburgueria</title>
+    <script>
+        function atualizarResumo() {
+            // Obter os elementos selecionados pelo cliente
+            var hamburgueres = document.getElementById("hamburgueres").value;
+            var bebida = document.getElementById("bebida").value;
+            var endereco = document.getElementById("endereco").value;
+
+            // Construir o resumo do pedido
+            var resumo = "<strong>Hambúrgueres:</strong> " + hamburgueres + "<br>";
+            resumo += "<strong>Bebida:</strong> " + bebida + "<br>";
+            resumo += "<strong>Endereço:</strong> " + endereco;
+
+            // Atualizar o conteúdo do elemento 'resumo'
+            document.getElementById("resumo").innerHTML = resumo;
+        }
+    </script>
 </head>
 
 <body>
+    <h1>Formulário de Pedido - Hamburgueria</h1>
 
-    <nav class="topnav">
-        <a href="index.html">Home</a>
-        <a href="quem_somos.html">Quem somos</a>
-        <a href="cardapio.html">Cardápio</a>
-        <a href="promocao_do_dia.html">Promoção do dia</a>
-        <a href="contato.html"> Contato</a>
-        <a href="pedido.html">Encomenda</a>
-    </nav>
+    <form action="processar_pedido.php" method="POST">
+        <!-- Restante do formulário -->
 
-    <section>
-        
-        <img src="/images/bg.jpg" class="bg">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
 
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required><br><br>
 
-        <form class="login">
+        <label for="hamburgueres">Hambúrgueres:</label>
+        <input type="text" id="hamburgueres" name="hamburgueres" required><br><br>
 
-            <img class="card" src="https://cdn-icons-png.flaticon.com/512/2776/2776451.png" >
-            <p>Faça seu pedido</h2>
+        <label for="bebida">Bebida:</label>
+        <input type="text" id="bebida" name="bebida" required><br><br>
 
-            <div class="inputBox">
-                <label for="lbl">Nome</label>
-                <input type="text" id="Nome" Name="Nome" placeholder="Digite seu nome." required><span class="mensagem-erro"  data-erro></span>
-            </div>
-          
-            <div class="inputBox">
-                <label for="lbl">Telefone</label>
-                <input type="text" placeholder="(00) 00000-0000" maxlength="11" minlength="10" required pattern="[0-11]{(2) [0-11]{5} [0-11]{4}"><span class="mensagem-erro" data-erro></span>
-            </div>
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" required><br><br>
 
-            <div class="inputBox">
-                <label for="lbl">Especificações do pedido</label>
-                <input type="text" placeholder="" required><span class="mensagem-erro" data-erro></span>
-            </div>
+        <h2>Molhos:</h2>
+        <input type="checkbox" id="ketchup" name="molhos[]" value="Ketchup">
+        <label for="ketchup">Ketchup</label><br>
 
-            <div class="inputBox">
-                <label for="lbl">Restrições alimentares </label>
-                <input type="text" placeholder="" required><span class="mensagem-erro" data-erro></span>
-            </div>
+        <input type="checkbox" id="maionese" name="molhos[]" value="Maionese">
+        <label for="maionese">Maionese</label><br>
 
-            <div class="inputBox">
-                <label for="lbl">Assunto</label>
-                <textarea placeholder="..." id="assuntoId" style="height: 90px" required></textarea>
-            </div>
+        <input type="checkbox" id="mostarda" name="molhos[]" value="Mostarda">
+        <label for="mostarda">Mostarda</label><br>
 
-            <button class="btn" id="btnId" type="button">Enviar</button>
+        <label for="observacoes">Observações:</label><br>
+        <textarea id="observacoes" name="observacoes" rows="4" cols="50"></textarea><br><br>
+  <h2>Retirada ou Entrega:</h2>
+    <input type="radio" id="retirada" name="retirada-entrega" value="Retirada" required>
+    <label for="retirada">Retirada</label><br>
 
-        </form>
+    <input type="radio" id="entrega" name="retirada-entrega" value="Entrega">
+    <label for="entrega">Entrega</label><br><br>
 
-    </section>
+    <h2>Opções de Ingredientes Adicionais:</h2>
+    <input type="checkbox" id="bacon" name="ingredientes-adicionais" value="Bacon">
+    <label for="bacon">Bacon</label><br>
 
+    <input type="checkbox" id="cebola" name="ingredientes-adicionais" value="Cebola Caramelizada">
+    <label for="cebola">Cebola Caramelizada</label><br>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="contact">
-            <ul>
-                <div>
-                    <a>Delivery</a>
-                </div>
+    <input type="checkbox" id="cogumelos" name="ingredientes-adicionais" value="Cogumelos">
+    <label for="cogumelos">Cogumelos</label><br><br>
+    <h2>Forma de Pagamento:</h2>
+    <select id="forma-pagamento" name="forma-pagamento" required>
+      <option value="Cartão">Cartão de Crédito</option>
+      <option value="Dinheiro">Dinheiro</option>
+    </select><br><br>
+    
+        <h2>Resumo do Pedido:</h2>
+        <div id="resumo"></div><br><br>
 
-                <div>
-                    <a>(69) 3422-9902</a>
-                </div>
+        <button type="button" onclick="atualizarResumo()">Atualizar Resumo</button>
+        <input type="submit" value="Enviar Pedido">
+    </form>
 
-                <div>
-                    <a>(69) 99935-6547 (WhatsApp) </a>
-                </div>
-            </ul>
-        </div>
-
-        <div class="end">
-            <ul>
-                <div>
-                    <a>Rua Seis de Maio, 991</a>
-                </div>
-                <div>
-                    <a>URUPÁ</a>
-                </div>
-                <div>
-                    <a>JI-PARANÁ</a>
-                </div>
-                <div>
-                    <a>RONDÔNIA</a>
-                </div>
-            </ul>
-        </div>
-        </div>
-
-        <div class="bottom">
-            <ul>
-                <div>
-                    <a>Copyright © 2023 <span><a href="#">HAMBURGUERIA YET</a></span></a>
-
-                </div>
-                <div class="text">
-                    <p>A Hamburgueria YET traz um novo conceito em Hambúrguer! Pão especial, ingredientes selecionados e
-                        um hambúrguer elaborado para surpreender seus sentidos!</p>
-                </div>
-            </ul>
-        </div>
-
-
-    </footer>
-    <script src="/JS/contato.js"></script>
 </body>
 
 </html>
