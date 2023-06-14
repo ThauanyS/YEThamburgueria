@@ -32,16 +32,19 @@ pointer-events: none;
   
 
 }
+
+.container img{
+width: 80%;
+}
 .l img{
     width: 60px;
 }
 .principal {
   
- 
-        width: 1000px;
+        padding-bottom: 80px;
         /* Define a largura como 320px */
         /* Define o preenchimento interno */
-        background:#ec5e002a;
+        background:#ffb81e;
         /* Define o fundo com uma cor semitransparente */
         border: 1px solid #ccc;
         /* Define uma borda sólida com cor cinza */

@@ -35,7 +35,7 @@ function submitForm(event) {
     const phone = document.getElementById("phone").value;
     const assunto = document.getElementById("assunto").value;
     const mensagem = document.getElementById("mensagem").value;
-  
+   
     var messageBox = document.getElementById("messageBox");
   
     document.getElementById("nome").value = "";
