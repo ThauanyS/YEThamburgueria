@@ -22,16 +22,18 @@
 
 
     <div class="container">
+
+
         <!-- Campos do formulário -->
         <form id="myForm" onsubmit="submitForm(event)">
-            <div id="messageBox"></div>
+
             <div>
-                <img class="card" src="https://cdn-icons-png.flaticon.com/512/2776/2776451.png">
+                <img class="card" src="https://cdn-icons-png.flaticon.com/256/5787/5787016.png">
                 <p>Formulário de Pedido</h2>
             </div>
 
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" Name="nome" placeholder="Digite seu nome completo." required>
+            <input type="text" id="nome" Name="nome" placeholder="Digite seu nome completo." pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+" required>
             <div class="mensagem-erro" data-erro></div>
 
 
@@ -40,13 +42,14 @@
                 pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" placeholder="(XX) XXXX-XXXX">
 
             <label for="hamburgueres">Hambúrgueres:</label>
-            <input type="text" id="hamburgueres" placeholder="xxxxxxxx@xxxxx" name="hamburgueres" required>
+            <input type="text" id="hamburgueres" placeholder="Descreva o que você gostaria de pedir.(Nome, Quantidade...)" name="hamburgueres"
+                required>
 
             <label for="bebida">Bebida:</label>
-            <input type="text" id="bebida" placeholder="xxxxxxxx@xxxxx" name="bebida" required>
+            <input type="text" id="bebida" placeholder="Escreva o que quer beber" name="bebida" required>
 
             <label for="endereco">Endereço:</label>
-            <input type="text" id="endereco" placeholder="xxxxxxxx@xxxxx" name="endereco" required>
+            <input type="text" id="endereco" placeholder="CEP, Bairro, Rua, Número..." name="endereco" required>
 
 
             <h3>Molhos:</h3>
@@ -75,20 +78,22 @@
             </div>
 
             <label for="opcao">Retirada ou Entrega:</label>
-            <select id="opcao" name="opcao">
-              <option value="retirada">Retirada</option>
-              <option value="entrega">Entrega</option>
+            <select  id="opcao" name="opcao" required>
+                <option value=""></option>
+                <option value="retirada">Retirada</option>
+                <option value="entrega">Entrega</option>
             </select>
 
             <label>Forma de Pagamento:</label>
             <select id="formapagamento" name="formapagamento" required>
+                <option value=""></option>
                 <option value="Crédito">Cartão de Crédito</option>
                 <option value="Dinheiro">Dinheiro</option>
                 <option value="Débito">Cartão de Débito</option>
                 <option value="Pix">Pix</option>
-    
+
             </select>
-          
+
             <div class="inputBox">
                 <label for="observacao">Observação:</label>
                 <textarea id="observacao" name="observacao" placeholder="..." maxlength="300" rows="4" cols="50"
@@ -97,53 +102,21 @@
 
             </div>
 
-           
+
             <h2>Resumo do Pedido:</h2>
             <div id="resumo"></div><br><br>
-    
-            <button type="button" onclick="atualizarResumo()">Atualizar Resumo</button>
+
+            <button type="button" class="rsm" onclick="atualizarResumo()">Atualizar Resumo</button>
             <button type="submit">Enviar</button>
+            <div id="messageBox"></div>
 
 
         </form>
     </div>
-   
 
-    <script>
-        function atualizarResumo() {
-            // Obter os elementos selecionados pelo cliente
-            var nome = document.getElementById("nome").value;
-            var telefone = document.getElementById("phone").value;
-            var hamburgueres = document.getElementById("hamburgueres").value;
-            var bebida = document.getElementById("bebida").value;
-            var endereco = document.getElementById("endereco").value;
-            var molhos = document.getElementsByName("molhos[]");
-            var opcao = document.getElementById("opcao").value;
-            var formaPagamento = document.getElementById("formapagamento").value;
-            var observacao = document.getElementById("observacao").value;
-    
-            // Construir o resumo do pedido
-            var resumo = "<strong>Nome:</strong> " + nome + "<br>";
-            resumo += "<strong>Celular:</strong> " + telefone + "<br>";
-            resumo += "<strong>Hambúrgueres:</strong> " + hamburgueres + "<br>";
-            resumo += "<strong>Bebida:</strong> " + bebida + "<br>";
-            resumo += "<strong>Endereço:</strong> " + endereco + "<br>";
-            resumo += "<strong>Molhos:</strong> ";
-            for (var i = 0; i < molhos.length; i++) {
-                if (molhos[i].checked) {
-                    resumo += molhos[i].value + ", ";
-                }
-            }
-            resumo = resumo.slice(0, -2) + "<br>"; // Remover a vírgula extra no final dos molhos selecionados
-            resumo += "<strong>Retirada ou Entrega:</strong> " + opcao + "<br>";
-            resumo += "<strong>Forma de Pagamento:</strong> " + formaPagamento + "<br>";
-            resumo += "<strong>Observação:</strong> " + observacao;
-    
-            // Atualizar o conteúdo do elemento 'resumo'
-            document.getElementById("resumo").innerHTML = resumo;
-        }
-    </script>
-    
+
+    <script src="/JS/pedido.js"></script>
+
 
 
 </body>
