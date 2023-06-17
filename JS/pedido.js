@@ -55,18 +55,7 @@ function submitForm(event) {
     document.getElementById("observacao").value = "";
     document.getElementById("charCount").innerHTML = "Máximo de caracteres: 300";
 
-    // Exemplo de exibição dos valores do formulário no console
-    console.log("Nome: " + nome);
-    console.log("Telefone: " + telefone);
-    console.log("Hambúrgueres: " + hamburgueres);
-    console.log("Bebida: " + bebida);
-    console.log("Endereço: " + endereco);
-    molhos.forEach(function (checkbox) {
-        console.log("Molho: " + checkbox.value);
-    });
-    console.log("Opção: " + opcao);
-    console.log("Forma de Pagamento: " + formaPagamento);
-    console.log("Observação: " + observacao);
+
 
     const erros = document.querySelectorAll("[data-erro]");
     erros.forEach((erro) => {
@@ -80,11 +69,11 @@ function submitForm(event) {
     var messageBox = document.getElementById("messageBox");
     messageBox.innerHTML = "Pedido enviado com sucesso! Entraremos em contato para a confirmação.";
     messageBox.className = "message success";
-    
-    setTimeout(function() {
+
+    setTimeout(function () {
         messageBox.innerHTML = "";
         messageBox.className = "message";
-      }, 5000);
+    }, 5000);
 
 }
 
