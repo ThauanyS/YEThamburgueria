@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="validacao.css">
+    <link rel="icon" href="SL.png">
+    <title>Sábado Letivo</title>
+</head>
+
+<body>
+    <header>
+        <h1>Sábado Letivo</h1>
+    </header>
+    <main>
+        <div class="inputs">
+            <div class="inputUm">
+                <label class="labelCPF">CPF</label>
+                <input class="inputCPF" id="inputCPF" type="text" minlength="11" maxlength="14" required>
+            </div>
+            <div class="inputOutros">
+                <label class="labelNome">Nome</label>
+                <input class="inputNome" id="inputNome" type="text" minlength="2" maxlength="50" required>
+            </div>
+            <div class="inputOutros">
+                <label class="labelCelular">Celular</label>
+                <input class="inputCelular" id="inputCelular" type="text" minlength="10" maxlength="20" required>
+            </div>
+            <div class="inputOutros">
+                <label class="labelEmail">E-mail</label>
+                <input class="inputEmail" id="inputEmail" type="text" minlength="5" maxlength="50" required>
+            </div>
+            <div class="msg">
+                <p class="mensagemErro" id="mensagemErro">Preencha os campos e clique no botão Salvar</p>
+            </div>
+        </div>
+        <div class="botoes">
+            <div class="salvar">
+                <button class="btSalvar" onclick="validar()" type="submit">Salvar</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Diego Viana da Silva</p>
+        <p>3° B Informática</p>
+    </footer>
+
+    <script>
+        function validar() {
+    const inputCPF = document.getElementById("inputCPF");
+    const inputNome = document.getElementById("inputNome");
+    const inputEmail = document.getElementById("inputEmail");
+    const inputCelular = document.getElementById("inputCelular");
+    const mensagemErro = document.getElementById("mensagemErro");
+
+    // Verificar quantidade mínima e máxima de caracteres
+    if (inputCPF.value.length < 11 || inputCPF.value.length > 14) {
+        mensagemErro.textContent = "CPF inválido. Insira um CPF com 11 a 14 caracteres.";
+        return; // interrompe a execução se houver erro
+    }
+
+    // Validar formato do CPF
+    const regexCPF = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
+    if (!regexCPF.test(inputCPF.value)) {
+        mensagemErro.textContent = "CPF inválido. Insira um CPF no formato válido (###.###.###-##).";
+        return; // interrompe a execução se houver erro
+    }
+
+    const cpf = inputCPF.value;
+
+    // Verificar se o CPF é válido
+    if (!validarCPF(cpf)) {
+        mensagemErro.textContent = "CPF inválido.";
+        return; // Encerrar a validação, pois o CPF é inválido
+    }
+
+    if (inputNome.value.length < 2 || inputNome.value.length > 50) {
+        mensagemErro.textContent = "Nome inválido. Insira um nome com 2 a 50 caracteres.";
+        return; // interrompe a execução se houver erro
+    }
+
+    if (inputCelular.value.length < 10 || inputCelular.value.length > 20) {
+        mensagemErro.textContent = "Celular inválido. Insira um celular com 10 a 20 caracteres.";
+        return; // interrompe a execução se houver erro
+    }
+
+    // Validar formato do número de celular
+    const regexCelular = /^\d{10,20}$/;
+    if (!regexCelular.test(inputCelular.value)) {
+        mensagemErro.textContent = "Número de celular inválido. Insira um número de celular válido (apenas dígitos, no mínimo 10 e no máximo 20 caracteres).";
+        return; // interrompe a execução se houver erro
+    }
+
+    if (inputEmail.value.length < 5 || inputEmail.value.length > 50) {
+        mensagemErro.textContent = "E-mail inválido. Insira um e-mail com 5 a 50 caracteres.";
+        return; // interrompe a execução se houver erro
+    }
+
+    // Se todas as validações passarem, limpar a mensagem de erro
+    mensagemErro.textContent = "Salvo com sucesso! Fique a vontade para mais cadastros.";
+
+    //verifica se todos os campos foram preenchidos
+    if (inputCPF.value === "" || inputNome.value === "" || inputEmail.value === "" || inputCelular.value === "") {
+        mensagemErro.textContent = "O preenchimento de todos os campos é obrigatório.";
+    } else {
+        mensagemErro.textContent = "Salvo com sucesso! Fique a vontade para mais cadastros.";
+    }
+
+    // Limpar os campos
+    inputCPF.value = "";
+    inputNome.value = "";
+    inputEmail.value = "";
+    inputCelular.value = "";
+}
+
+function validarCPF(cpf) {
+    // Remover caracteres não numéricos
+    cpf = cpf.replace(/\D/g, '');
+
+    // Verificar se o CPF tem todos os dígitos iguais
+    if (/^(\d)\1*$/.test(cpf)) {
+        return false;
+    }
+
+    // Validar o primeiro dígito verificador
+    let sum = 0;
+    for (let i = 0; i < 9; i++) {
+        sum += parseInt(cpf.charAt(i)) * (10 - i);
+    }
+    let digit1 = (sum * 10) % 11;
+    if (digit1 === 10) {
+        digit1 = 0;
+    }
+    if (digit1 !== parseInt(cpf.charAt(9))) {
+        return false;
+    }
+
+    // Validar o segundo dígito verificador
+    sum = 0;
+    for (let i = 0; i < 10; i++) {
+        sum += parseInt(cpf.charAt(i)) * (11 - i);
+    }
+    let digit2 = (sum * 10) % 11;
+    if (digit2 === 10) {
+        digit2 = 0;
+    }
+    if (digit2 !== parseInt(cpf.charAt(10))) {
+        return false;
+    }
+
+    // CPF válido
+    return true;
+}
+
+
+
+    </script>
+
+    <style>body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0%;
+    }
+    
+    :root {
+        --gradiente1: purple;
+        --gradiente2: cyan;
+    }
+    
+    html {
+        background: radial-gradient(farthest-corner at left top, var(--gradiente1), var(--gradiente2));
+        height: 55vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    
+    header {
+        text-align: center;
+        background-color: white;
+        padding: 1%;
+        border-radius: 10px;
+        word-wrap: break-word;
+        width: 23%;
+        margin: 0 auto;
+        margin-top: 1%;
+    }
+    
+    main {
+        text-align: center;
+        margin: 20px auto 0;
+    
+        .inputs {
+            background-color: white;
+            padding: 30px;
+    
+            .inputUm {
+                .inputCPF {
+                    width: 300px;
+                    padding: 5px;
+                }
+            }
+    
+            .inputOutros {
+                margin-top: 30px;
+    
+                .inputNome {
+                    width: 300px;
+                    padding: 5px;
+                }
+    
+                .inputCelular {
+                    width: 300px;
+                    padding: 5px;
+                }
+    
+                .inputEmail {
+                    width: 300px;
+                    padding: 5px;
+                }
+            }
+            .msg{
+                background: radial-gradient(farthest-corner at left top, var(--gradiente1), var(--gradiente2));
+                width: 35%;
+                color: white;
+                padding: 0.1%;
+                border-radius: 10px;
+                margin: 30px auto 0;
+            }
+        }
+    
+        .botoes {
+            .salvar {
+                margin: 30px;
+    
+                .btSalvar {
+                    width: 150px;
+                    padding: 10px;
+                    background: white;
+                    border-radius: 10px;
+                    font-size: 17px;
+                    border: none;
+                }
+            }
+        }
+    }
+    
+    footer {
+        text-align: center;
+        background-color: white;
+        border-radius: 10px;
+        width: 30%;
+        margin: 0 auto;
+        padding: 0.1%;
+        margin-top: 20px;
+    }</style>
+    <script src="validacao.js"></script>
+</body>
+
+</html>

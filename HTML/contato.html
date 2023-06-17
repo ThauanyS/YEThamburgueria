@@ -23,27 +23,26 @@
     <div class="container">
         <!-- Campos do formulário -->
         <form id="myForm" onsubmit="submitForm(event)">
-            <div id="messageBox"></div>
+
             <div>
                 <img class="card" src="https://cdn-icons-png.flaticon.com/512/2776/2776451.png">
                 <p>Entre em contato conosco</h2>
             </div>
 
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" Name="nome" placeholder="Digite seu nome completo." required>
-            <div class="mensagem-erro"  data-erro></div>
+            <input type="text" id="nome" Name="nome" placeholder="Digite seu nome completo." >
 
             <label for="email">E-mail:</label>
             <!-- O input do tipo "email" para o campo "email" -->
-            <input type="email" id="email" placeholder="xxxxxxxx@xxxxx" required>
+            <input type="text" id="email" placeholder="xxxxxxxx@xxxxx" >
 
             <label for="phone">Celular:</label>
             <!-- O input do tipo "tel" para o campo "phone" -->
-            <input type="tel" id="phone" required minlength="14" maxlength="15" oninput="formatarTelefone(this)"
-                pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" placeholder="(XX) XXXX-XXXX">
+            <input type="text" id="phone"  minlength="14" maxlength="15" oninput="formatarTelefone(this)"
+                 placeholder="(XX) XXXX-XXXX">
 
             <label for="assunto">Selecione um assunto:</label>
-            <select id="assunto" name="assunto" required>
+            <select id="assunto" name="assunto" >
                 <option value=""></option>
                 <option value="Fazer um pedido">Fazer um pedido</option>
                 <option value="Consulta sobre o cardápio">Consulta sobre o cardápio</option>
@@ -69,22 +68,22 @@
             </select>
             <div class="inputBox">
                 <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem"  placeholder="..." maxlength="300" rows="4" cols="50" style="height: 90px" required></textarea>
+                <textarea id="mensagem" name="mensagem"  placeholder="..." maxlength="300" rows="4" cols="50" style="height: 90px" ></textarea>
                 <div class="carac" id="charCount">Máximo de caracteres: 300</div>
 
             </div>
 
-            <!-- O atributo oninput chama a função formatarCPF(this) ou formatarTelefone(this) sempre que o 
-                valor do campo de CPF é modificado. -->
-            <!-- "pattern" define um padrão que o valor do campo deve seguir -->
-            <!-- "placeholder" exibe um texto de exemplo dentro do campo -->
-
-            <button type="submit">Enviar</button>
-            <!-- O botão para enviar o formulário -->
-
-
+            <div class="msg">
+                <p class="mensagemErro" id="mensagemErro">Preencha os campos e clique no botão Salvar</p>
+            </div>
+            <div class="salvar">
+                <button class="btSalvar" onclick="validar()" type="submit">Salvar</button>
+            </div>            <!-- O botão para enviar o formulário -->
         </form>
     </div>
+
+  
+  
     <!-- Para validar e manipular o formulário -->
     <script src="/JS/contato.js"></script>
 

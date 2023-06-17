@@ -226,6 +226,16 @@ button:hover {
     font-size: 15px;
     margin-left: 16px;
   }
+
+  #mensagemErro {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 10px;
+    background-color:red;
+    border-radius: 10px;
+    border: solid 0.5px;
+  }
  
   .carac {
     text-align: end;

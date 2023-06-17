@@ -1,89 +1,57 @@
-const inputs = document.querySelectorAll("[required]");
-inputs.forEach( (elemento)=> {
-    elemento.addEventListener("blur", (evento)=>{
-        validaCampo(evento.target)
-    });
-});
-
-
-function validaCampo(campo){
-    const msnErro = campo.parentNode.querySelector("[data-erro]");
-    if(campo.name === "nome"){
-        if(campo.value.length<5){
-            msnErro.textContent = "Digite o nome completo";
-        }else{
-            msnErro.textContent= "";
-        }
-    }
-}
-const textarea = document.getElementById("mensagem");
-const charCount = document.getElementById("charCount");
-const maxLength = 300; 
-
-textarea.addEventListener("input", function() {
-  const currentLength = textarea.value.length;
-  const remainingLength = maxLength - currentLength;
-  
-  charCount.textContent = `Máximo de caracteres: ${remainingLength}`;
-});
-
-function submitForm(event) {
-    event.preventDefault();
+function validar() {
   
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
     const assunto = document.getElementById("assunto").value;
     const mensagem = document.getElementById("mensagem").value;
-   
-    var messageBox = document.getElementById("messageBox");
+    const mensagemErro = document.getElementById("mensagemErro");
   
-    document.getElementById("nome").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("phone").value = "";
-    document.getElementById("assunto").value = "";
-    document.getElementById("mensagem").value = "";
+    var nomeSobrenomeRegex = /^[a-zA-Z]+\s[a-zA-Z]+$/;
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var phoneRegex = /^\(\d{2}\)\s\d{4,5}-\d{4}$/;
   
-    // Limpar os erros
-    const erros = document.querySelectorAll("[data-erro]");
-    erros.forEach((erro) => {
-      erro.textContent = "";
-    });
-  
-    // Redefinir o contador de caracteres
-    const charCount = document.getElementById("charCount");
-    charCount.textContent = `Máximo de caracteres: ${maxLength}`;
-  
-    messageBox.innerHTML = "Formulário enviado com sucesso!";
-    messageBox.className = "message success";
-    
-    setTimeout(function() {
-        messageBox.innerHTML = "";
-        messageBox.className = "message";
-      }, 3000);
-  }
-  
-const form = document.getElementById("myForm");
-form.addEventListener("submit", submitForm);
-
-function formatarTelefone(input) {
-
-    let valor = input.value.replace(/\D/g, "");
-
-    let formatado;
-
-    if (valor.length === 11) {
-        formatado = `(${valor.substring(0, 2)}) ${valor.substring(2, 7)}-${valor.substring(7)}`;
-    } else if (valor.length === 10) {
-        formatado = `(${valor.substring(0, 2)}) ${valor.substring(2, 6)}-${valor.substring(6)}`;
-    } else {
-        formatado = valor;
+    if (nome === '') {
+      mensagemErro.textContent = 'Por favor, preencha o campo de nome.';
+      return; // interrompe a execução se houver erro
+    } if (!nomeSobrenomeRegex.test(nome)) {
+      mensagemErro.textContent = 'Por favor, insira um nome e sobrenome válidos (apenas letras).';
+      return; // interrompe a execução se houver erro
+    } if (phone === '') {
+      mensagemErro.textContent = 'Por favor, preencha o campo de celular.';
+      return; // interrompe a execução se houver erro
+    } if (!phoneRegex.test(phone)) {
+      mensagemErro.textContent = 'Por favor, insira um número de celular válido no formato (XX) XXXX-XXXX.';
+      return; // interrompe a execução se houver erro
+    } if (email === '') {
+      mensagemErro.textContent = 'Por favor, preencha o campo de e-mail.';
+      return; // interrompe a execução se houver erro
+    } if (!emailRegex.test(email)) {
+      mensagemErro.textContent = 'Por favor, insira um endereço de e-mail válido.';
+      return; // interrompe a execução se houver erro
+    } if (assunto === '') {
+      mensagemErro.textContent = 'Por favor, selecione um assunto.';
+      return; // interrompe a execução se houver erro
+    } if (mensagem === '') {
+      mensagemErro.textContent = 'Por favor, preencha o campo de mensagem.';
+      return; // interrompe a execução se houver erro
     }
+  
+    // Se todas as validações passarem, limpar a mensagem de erro
+  
 
-    input.value = formatado;
-}
+    mensagemErro.textContent = "Salvo com sucesso! Fique a vontade para mais cadastros.";
 
 
-
-
-
+    // Limpar os campos
+    document.getElementById("nome").value = '';
+    document.getElementById("email").value = '';
+    document.getElementById("phone").value = '';
+    document.getElementById("assunto").value = '';
+    document.getElementById("mensagem").value = '';
+  }
+  const form = document.getElementById("myForm");
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+    validar();
+  });
