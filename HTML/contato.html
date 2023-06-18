@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/contato.css">
-    <link rel="icon" href="/imagem/YTE.jpg">
+    <link rel="stylesheet" href="../CSS/contato.css">
+    <link rel="icon" href="../imagem/YTE.jpg">
     <title>Contato</title>
 </head>
 
@@ -18,6 +18,7 @@
         <a href="cardapio.html">Cardápio</a>
         <a href="promocao_do_dia.html">Promoção do Dia</a>
         <a href="contato.html"> Contato</a>
+        <a href="pedido.html">Pedido</a>
     </nav>
 
     <div class="container">
@@ -30,19 +31,19 @@
             </div>
 
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" Name="nome" placeholder="Digite seu nome completo." >
+            <input type="text" id="nome" Name="nome" placeholder="Digite seu nome completo.">
 
             <label for="email">E-mail:</label>
             <!-- O input do tipo "email" para o campo "email" -->
-            <input type="text" id="email" placeholder="xxxxxxxx@xxxxx" >
+            <input type="text" id="email" placeholder="xxxxxxxx@xxxxx">
 
             <label for="phone">Celular:</label>
             <!-- O input do tipo "tel" para o campo "phone" -->
-            <input type="text" id="phone"  minlength="14" maxlength="15" oninput="formatarTelefone(this)"
-                 placeholder="(XX) XXXX-XXXX">
+            <input type="text" id="phone" minlength="14" maxlength="15" oninput="formatarTelefone(this)"
+                placeholder="(XX) XXXX-XXXX">
 
             <label for="assunto">Selecione um assunto:</label>
-            <select id="assunto" name="assunto" >
+            <select id="assunto" name="assunto" onchange="this.classList.add('changed')">
                 <option value=""></option>
                 <option value="Fazer um pedido">Fazer um pedido</option>
                 <option value="Consulta sobre o cardápio">Consulta sobre o cardápio</option>
@@ -68,24 +69,20 @@
             </select>
             <div class="inputBox">
                 <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem"  placeholder="..." maxlength="300" rows="4" cols="50" style="height: 90px" ></textarea>
+                <textarea id="mensagem" name="mensagem" placeholder="..." maxlength="300" rows="4" cols="50"
+                    style="height: 90px"></textarea>
                 <div class="carac" id="charCount">Máximo de caracteres: 300</div>
-
             </div>
 
-            <div class="msg">
-                <p class="mensagemErro" id="mensagemErro">Preencha os campos e clique no botão Salvar</p>
-            </div>
-            <div class="salvar">
-                <button class="btSalvar" onclick="validar()" type="submit">Salvar</button>
-            </div>            <!-- O botão para enviar o formulário -->
+            <div id="messageBox"></div>
+            <button onclick="validar()" type="submit">Enviar</button>
         </form>
     </div>
 
-  
-  
+
+
     <!-- Para validar e manipular o formulário -->
-    <script src="/JS/contato.js"></script>
+    <script src="../JS/contato.js"></script>
 
     <!-- Footer -->
 
