@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/reserva.css">
+    <title>Cadastrar Reserva</title>
+</head>
+<body>
+
+<body>
+
+            
+                <nav class="topnav">
+                    <a href="index.html">Home</a>
+                    <a href="quem_somos.html">Quem somos</a>
+                    <a href="cardapio.html">Cardápio</a>
+                    <a href="promocao_do_dia.html">Promoção do Dia</a>
+                    <a href="contato.html"> Contato</a>
+                    <a href="pedido.html">Pedido</a>
+                    <a href="cadastrarCliente.html"> Cliente</a>
+                    <a href="cadastrarReserva.html">Reserva</a>
+                    
+                </nav>
+                <div class="container">
+                    <!-- Campos do formulário -->
+                    <form id="myForm" onsubmit="validar(event)">
+                        <div>
+                            <img class="card" src="../imagem/mesa.png">
+                            <p>Reserve seu cantinho especial ♥</p>
+                        </div>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+                        <label for="QtdDePessoas">Quantidade de pessoas</label>
+                        <input type="number" id="QtdDePessoas" name="QtdDePessoas" placeholder="Digite ou escolha a quantidade">
+                        <label for="date">Data:</label>
+                        <input type="date" id="date" name="data">
+                        <label for="phone">Contato:</label>
+                        <input type="text" id="phone" minlength="14" maxlength="15" oninput="formatarTelefone(this)" placeholder="(XX) XXXX-XXXX">
+                        <label for="mesa">Escolha uma mesa:</label>
+                        <select id="mesa" name="mesa" onchange="this.classList.add('changed')">
+                            <option value=""></option>
+                            <option value="Mesa centralizada">Mesa centralizada</option>
+                            <option value="Mesa nas laterais">Mesa nas laterais</option>
+                            <option value="Mesa discreta">Mesa discreta</option>
+                            <option value="Mesa ao ar livre no terraço">Mesa ao ar livre no terraço</option>                      
+                        </select>
+                        <div id="messageBox"></div>
+                        <button type="submit">Concluir Reserva</button>
+                    </form>
+                </div>
+                <!-- Para validar e manipular o formulário -->
+                <script src="/JS/reserva.js"></script>
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="contact">
+                        <ul>
+                            <div>
+                                <a>Delivery</a>
+                            </div>
+                            <div>
+                                <a>(69) 3422-9902</a>
+                            </div>
+                            <div>
+                                <a>(69) 99935-6547 (WhatsApp) </a>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="end">
+                        <ul>
+                            <div>
+                                <a>Rua Seis de Maio, 991</a>
+                            </div>
+                            <div>
+                                <a>URUPÁ</a>
+                            </div>
+                            <div>
+                                <a>JI-PARANÁ</a>
+                            </div>
+                            <div>
+                                <a>RONDÔNIA</a>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="bottom">
+                        <ul>
+                            <div>
+                                <a>Copyright © 2023 <span><a href="#">HAMBURGUERIA YET</a></span></a>
+                            </div>
+                            <div class="text">
+                                <p>A Hamburgueria YET traz um novo conceito em Hambúrguer! Pão especial, ingredientes selecionados e
+                                    um hambúrguer elaborado para surpreender seus sentidos!</p>
+                            </div>
+                        </ul>
+                    </div>
+                </footer>
+            </body>
+            </html>
+            

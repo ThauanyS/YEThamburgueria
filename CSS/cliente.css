@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+body h1 {
+    margin-top: 50px;
+}
+body {
+    background-image: url('/imagem/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #ff771e;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+.topnav a {
+    color: whitesmoke;
+    padding: 12px 26px;
+    text-decoration: none;
+    text-align: right;
+    font-size: 16pt;
+}
+
+.topnav a:hover {
+    background-color: rgb(255, 72, 0);
+    color: rgb(253, 253, 253);
+    border-bottom: solid 2px #ffff98;
+    border-radius: 11px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 90px;
+    margin-top: 90px;
+}
+
+.card {
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.623);
+    border-radius: 50%;
+    background-color: #ec5f00;
+    margin-bottom: 10px;
+    margin-left: 40%;
+}
+
+form {
+    width: 400px;
+    padding: 25px 25px;
+    background: #ec5e0046;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.658);
+    margin-bottom: 10%;
+}
+
+form p {
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+form label {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    margin-left: 20px;
+    color: black;
+}
+
+input,
+textarea,
+select {
+    width: 92%;
+    padding: 8.5px;
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: #ffffff2c;
+    margin-left: 17px;
+    border: solid 0.1px rgba(255, 255, 255, 0.315);
+}
+
+
+
+input,
+textarea,
+select:focus {
+    outline: none;
+}
+
+input:not(:placeholder-shown),
+textarea:not(:placeholder-shown) {
+    background-color: white;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #1c171770;
+    font-size: 13px;
+}
+
+input,
+button,
+textarea,
+select {
+    margin-bottom: 10px;
+    display: block;
+}
+
+select.changed {
+    background-color: white;
+    color: black;
+}
+select option[value=''] {
+    background-color: #ffffff2c;
+}
+
+
+button {
+    background: #ec5f00;
+    width: 100%;
+    margin-top: 10px;
+    padding: 9px;
+    font-size: 1em;
+    color: #cf4200;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+button:hover {
+    background: #d64c42;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: auto;
+    background-color: rgb(236, 41, 41);
+}
+
+.footer a,
+.footer p {
+    color: aliceblue;
+}
+
+
+.carac {
+    text-align: end;
+    margin-right: 15px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+
+
+.message {
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.error {
+    background-color: #f44336;
+    color: white;
+}
+
+.success {
+    background-color: #4caf50;
+    color: white;
+}
