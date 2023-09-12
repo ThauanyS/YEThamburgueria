@@ -25,7 +25,7 @@
 
     <div class="container">
         <!-- Campos do formulário -->
-        <form id="myForm" onsubmit="submitForm(event)">
+        <form id="myForm" method="POST" action="../php/contato.php" onsubmit="submitForm(event)">
 
             <div>
                 <img class="card" src="https://cdn-icons-png.flaticon.com/512/2776/2776451.png">
@@ -37,15 +37,15 @@
 
             <label for="email">E-mail:</label>
             <!-- O input do tipo "email" para o campo "email" -->
-            <input type="text" id="email" placeholder="xxxxxxxx@xxxxx">
+            <input type="text" id="email" name="email" placeholder="xxxxxxxx@xxxxx">
 
             <label for="phone">Celular:</label>
             <!-- O input do tipo "tel" para o campo "phone" -->
-            <input type="text" id="phone" minlength="14" maxlength="15" oninput="formatarTelefone(this)"
+            <input type="text" id="phone" minlength="14" name="celular" maxlength="15" oninput="formatarTelefone(this)"
                 placeholder="(XX) XXXX-XXXX">
 
             <label for="assunto">Selecione um assunto:</label>
-            <select id="assunto" name="assunto" onchange="this.classList.add('changed')">
+            <select id="assunto" name="assunto" name="assunto" onchange="this.classList.add('changed')">
                 <option value=""></option>
                 <option value="Fazer um pedido">Fazer um pedido</option>
                 <option value="Consulta sobre o cardápio">Consulta sobre o cardápio</option>

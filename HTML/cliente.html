@@ -26,7 +26,7 @@
     
         <div class="container">
             <!-- Campos do formulário -->
-            <form id="myForm" method="POST" action="" onsubmit="validar(event)">
+            <form id="myForm" method="POST" action="../php/cliente.php" onsubmit="validar(event)">
                 <div>
                     <img class="card" src="../imagem/cliente.png">
                     <p>Cadastre-se como nosso cliente e seja nosso cliente oficial!!!</p>
@@ -56,7 +56,7 @@
                 </div>
     
                 <div id="messageBox"></div>
-                <button type="submit">Concluir Reserva</button>
+                <button onclick="validar()" type="submit">Concluir Reserva</button>
             </form>
         </div>
     
