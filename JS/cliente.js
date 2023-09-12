@@ -1,6 +1,6 @@
 function validar(event) {
+    console.log("Função validar() foi chamada."); // Adicione esta linha para verificar se a função é chamada
     event.preventDefault(); // Impede o envio padrão do formulário
-
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
