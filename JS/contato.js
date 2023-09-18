@@ -1,6 +1,4 @@
-function validar(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
-
+function validar() {
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
@@ -12,38 +10,11 @@ function validar(event) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^\(\d{2}\)\s\d{4,5}-\d{4}$/;
 
-    if (nome === '') {
-        messageBox.innerHTML = 'Por favor, preencha o campo de nome.';
+    if (nome === '' || !nomeSobrenomeRegex.test(nome) || phone === '' || !phoneRegex.test(phone) || email === '' || !emailRegex.test(email) || assunto === '' || mensagem === '') {
+        // Exibir mensagem de erro no mesmo messagebox
+        messageBox.innerHTML = "Por favor, preencha todos os campos corretamente.";
         messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (!nomeSobrenomeRegex.test(nome)) {
-        messageBox.innerHTML = 'Por favor, insira um nome e sobrenome válidos (apenas letras).';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (phone === '') {
-        messageBox.innerHTML = 'Por favor, preencha o campo de celular.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (!phoneRegex.test(phone)) {
-        messageBox.innerHTML = 'Por favor, insira um número de celular válido com 11 ou 10 números.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (email === '') {
-        messageBox.innerHTML = 'Por favor, preencha o campo de e-mail.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (!emailRegex.test(email)) {
-        messageBox.innerHTML = 'Por favor, insira um email válido. Certifique-se de incluir o símbolo "@" e o domínio ".com"';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (assunto === '') {
-        messageBox.innerHTML = 'Por favor, selecione um assunto.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (mensagem === '') {
-        messageBox.innerHTML = 'Por favor, preencha o campo de mensagem.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
+        return false; // Retorna false para impedir o envio do formulário
     }
 
     // Limpar os campos
@@ -70,12 +41,16 @@ function validar(event) {
 
     setTimeout(function () {
         messageBox.innerHTML = "";
-        messageBox.className = "message sucess";
+        messageBox.className = "message success";
     }, 3000);
+
+    return true; // Retorna true para permitir o envio do formulário
 }
 
 const form = document.getElementById("myForm");
-form.addEventListener("submit", validar);
+form.onsubmit = validar;
+
+
 
 // Função para formatar visualmente o campo de telefone
 function formatarTelefone(input) {
@@ -100,6 +75,8 @@ function formatarTelefone(input) {
     // Atualizar o valor do campo de entrada com o valor formatado
     input.value = formatado;
 }
+
+
 
 const textarea = document.getElementById("mensagem");
 const charCount = document.getElementById("charCount");

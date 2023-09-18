@@ -14,7 +14,6 @@
         $mensagem = $_POST['mensagem'];
 
 
-
         // Crie e execute a consulta de inserção
         $query = "INSERT INTO contato (nome_con,assunto_con, mensagem_con, email_con, celular_con) 
         VALUES ('$nome', '$assunto', '$mensagem', '$email', '$celular')";
