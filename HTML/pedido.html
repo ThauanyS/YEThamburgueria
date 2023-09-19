@@ -27,7 +27,7 @@
 
 
         <!-- Campos do formulário -->
-        <form id="myForm" onsubmit="submitForm(event)">
+        <form id="myForm"  method="POST" action="../php/pedido.php">
 
             <div>
                 <img class="card" src="https://cdn-icons-png.flaticon.com/256/5787/5787016.png">
@@ -35,57 +35,57 @@
             </div>
 
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" Name="nome" placeholder="Digite seu nome completo.">
+            <input type="text" id="nome" Name="nome" placeholder="Digite seu nome completo." required>
 
             <label for="phone">Celular:</label>
-            <input type="text" id="phone" minlength="14" maxlength="15" oninput="formatarTelefone(this)"
-                placeholder="(XX) XXXX-XXXX">
+            <input type="tel" id="phone" minlength="14" name="celular" maxlength="15" oninput="formatarTelefone(this)"
+            placeholder="(XX) XXXXX-XXXX" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required >
 
             <label for="hamburgueres">Hambúrgueres:</label>
             <input type="text" id="hamburgueres"
-                placeholder="Descreva o que você gostaria de pedir.(Nome, Quantidade...)" name="hamburgueres">
+                placeholder="Descreva o que você gostaria de pedir.(Nome, Quantidade...)" name="hamburgueres" required>
 
             <label for="bebida">Bebidas:</label>
-            <input type="text" id="bebida" placeholder="Digite o que você quer beber(opcional)" name="bebida">
-
-            <label for="endereco">Endereço:</label>
-            <input type="text" id="endereco" placeholder="Cidade, Bairro, Rua, Número." name="endereco">
+            <input type="text" id="bebida" placeholder="Digite o que você quer beber(opcional)" name="bebidas" >
 
 
             <h3>Escolha três molhos(opcional):</h3>
             <div class="molhos">
-                <input type="checkbox" id="ketchup" name="molhos[]" value="Ketchup">
+                <input type="checkbox" id="ketchup" name="molhos" value="Ketchup" >
                 <label for="ketchup">Ketchup</label><br>
             </div>
             <div class="molhos">
-                <input type="checkbox" id="maionese" name="molhos[]" value="Maionese">
+                <input type="checkbox" id="maionese" name="molhos" value="Maionese" >
                 <label for="maionese">Maionese Temperada</label><br>
             </div>
             <div class="molhos">
 
-                <input type="checkbox" id="mostarda" name="molhos[]" value="Mostarda">
+                <input type="checkbox" id="mostarda" name="molhos" value="Mostarda" >
                 <label for="mostarda">Mostarda</label><br>
             </div>
             <div class="molhos">
 
-                <input type="checkbox" id="barbecue" name="molhos[]" value="Barbecue">
+                <input type="checkbox" id="barbecue" name="molhos" value="Barbecue" >
                 <label for="barbecue">Barbecue</label><br>
             </div>
             <div class="molhos">
 
-                <input type="checkbox" id="alho" name="molhos[]" value="Alho">
+                <input type="checkbox" id="alho" name="molhos" value="Alho" >
                 <label for="alho">Molho de Alho</label><br>
             </div>
 
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" placeholder="Cidade, Bairro, Rua, Número." name="endereco" required>
+
             <label for="opcao">Retirada ou Entrega:</label>
-            <select id="opcao" name="opcao" onchange="this.classList.add('changed')">
+            <select id="opcao" name="opcao" onchange="this.classList.add('changed')" required>
                 <option value=""></option>
                 <option value="retirada">Retirada</option>
                 <option value="entrega">Entrega</option>
             </select>
 
             <label>Forma de Pagamento:</label>
-            <select id="formapagamento" name="formapagamento" onchange="this.classList.add('changed')">
+            <select id="formapagamento" name="formapagamento" onchange="this.classList.add('changed')" required>
                 <option value=""></option>
                 <option value="Crédito">Cartão de Crédito</option>
                 <option value="Dinheiro">Dinheiro</option>
@@ -96,7 +96,7 @@
 
             <div class="inputBox">
                 <label for="observacao">Observação:</label>
-                <textarea id="observacao" name="observacao" placeholder="..." maxlength="300" rows="4" cols="50"
+                <textarea id="observacao" name="observacao" placeholder="..." required maxlength="300" rows="4" cols="50"
                     style="height: 90px"></textarea>
                 <div class="carac" id="charCount">Máximo de caracteres: 300</div>
 
@@ -108,13 +108,14 @@
             <div class="btt">
                 <button type="button" class="rsm" onclick="atualizarResumo()">Atualizar Resumo</button>
             </div>
-            <button onclick="validarPedido()" type="submit">Enviar</button>
+            <button type="submit">Enviar</button>
             <div id="messageBox"></div>
 
         </form>
     </div>
 
 
+    <script src="../JS/pedido.js"></script>
 
 
     <!-- Footer -->

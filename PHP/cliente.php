@@ -10,15 +10,13 @@
         $nome = $_POST['nome']; 
         $email = $_POST['email']; 
         $celular = $_POST['celular'];
-        $data = $_POST['date'];
-        $cep = $_POST['cep'];
         $cpf = $_POST['cpf'];
-
+        $senha = $_POST['senha'];
 
 
         // Crie e execute a consulta de inserção
-        $query = "INSERT INTO cliente (nome_cli, email_cli, data_nasc_cli,cpf_cli,celular_cli, cep_cli) 
-        VALUES ('$nome', '$email', '$data', '$cpf', '$celular', '$cep')";
+        $query = "INSERT INTO cliente (nome_cli, email_cli, celular_cli,  cpf_cli, senha_cli) 
+        VALUES ('$nome', '$email', '$celular', '$cpf', '$senha')";
         $result = mysqli_query($_con, $query);
 
         if ($result) {

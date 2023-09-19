@@ -126,15 +126,6 @@ select {
     display: block;
 }
 
-select.changed {
-    background-color: white;
-    color: black;
-}
-select option[value=''] {
-    background-color: #ffffff2c;
-}
-
-
 button {
     background: #ec5f00;
     width: 100%;

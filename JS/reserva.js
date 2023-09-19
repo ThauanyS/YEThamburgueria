@@ -1,55 +1,26 @@
-function validar(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
 
-    const nome = document.getElementById("nome").value;
-    const phone = document.getElementById("phone").value;
-    const mesa = document.getElementById("mesa").value;
-    const QtdDePessoas = document.getElementById("QtdDePessoas").value;
-    const date = document.getElementById("date").value;
-    const messageBox = document.getElementById("messageBox");
+const form = document.getElementById("myForm");
 
-    const nomeSobrenomeRegex = /^[a-zA-Z]+\s[a-zA-Z]+$/;
-    const phoneRegex = /^\(\d{2}\)\s\d{4,5}-\d{4}$/;
+// Função para formatar visualmente o campo de telefone
+function formatarTelefone(input) {
+    // Obter o valor do campo de entrada e remover caracteres não numéricos
+    let valor = input.value.replace(/\D/g, "");
 
-    if (nome === '') {
-        messageBox.innerHTML = 'Por favor, preencha o campo de nome.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (!nomeSobrenomeRegex.test(nome)) {
-        messageBox.innerHTML = 'Por favor, insira um nome e sobrenome válidos (apenas letras).';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (phone === '') {
-        messageBox.innerHTML = 'Por favor, preencha o campo de celular.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (!phoneRegex.test(phone)) {
-        messageBox.innerHTML = 'Por favor, insira um número de celular válido com 11 ou 10 números.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (mesa === '') {
-        messageBox.innerHTML = 'Por favor, selecione uma mesa.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (date === '') {
-        messageBox.innerHTML = 'Por favor, selecione uma data.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (QtdDePessoas === '') {
-        messageBox.innerHTML = 'Por favor, selecione a quantidade de pessoas.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
+    // Variável para armazenar o valor formatado do telefone
+    let formatado;
+
+    // Verificar o comprimento do valor para determinar o formato adequado
+    if (valor.length === 11) {
+        // Formatar como (XX) XXXXX-XXXX
+        formatado = `(${valor.substring(0, 2)}) ${valor.substring(2, 7)}-${valor.substring(7)}`;
+    } else if (valor.length === 10) {
+        // Formatar como (XX) XXXX-XXXX
+        formatado = `(${valor.substring(0, 2)}) ${valor.substring(2, 6)}-${valor.substring(6)}`;
+    } else {
+        // Manter o valor original se não corresponder a nenhum formato esperado
+        formatado = valor;
     }
 
-    // Se todas as validações passarem, exibe uma mensagem de sucesso
-    messageBox.innerHTML = 'Reserva realizada com sucesso!';
-    messageBox.className = "message success";
-}
-
-function formatarTelefone(input) {
-    let value = input.value;
-    value = value.replace(/\D/g, ""); // Remove todos os caracteres não numéricos
-    value = value.replace(/^(\d{2})(\d)/g, "($1) $2"); // Adiciona parênteses em volta dos dois primeiros dígitos
-    value = value.replace(/(\d)(\d{4})$/, "$1-$2"); // Adiciona um hífen entre o quarto e o quinto dígitos
-    input.value = value;
+    // Atualizar o valor do campo de entrada com o valor formatado
+    input.value = formatado;
 }

@@ -1,86 +1,4 @@
-function validarPedido(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
 
-    const nome = document.getElementById("nome").value;
-    const phone = document.getElementById("phone").value;
-    const hamburgueres = document.getElementById("hamburgueres").value;
-    const bebida = document.getElementById("bebida").value;
-    const endereco = document.getElementById("endereco").value;
-    const opcao = document.getElementById("opcao").value;
-    const formapagamento = document.getElementById("formapagamento").value;
-    const observacao = document.getElementById("observacao").value;
-    const messageBox = document.getElementById("messageBox");
-
-    const enderecoRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+,\s[A-Za-zÀ-ÖØ-öø-ÿ\s]+,\s[A-Za-zÀ-ÖØ-öø-ÿ\s]+,\s[0-9]+\s*$/;
-    const telefoneRegex = /^\(\d{2}\)\s\d{4,5}-\d{4}$/;
-    const nomeSobrenomeRegex = /^[a-zA-Z]+\s[a-zA-Z]+$/;
-
-    if (nome === '') {
-        messageBox.innerHTML = 'Por favor, preencha o campo de nome.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (!nomeSobrenomeRegex.test(nome)) {
-        messageBox.innerHTML = 'Por favor, insira um nome e sobrenome válidos (apenas letras).';
-        messageBox.className = "message error";
-    } else if (phone === '') {
-        messageBox.innerHTML = 'Por favor, preencha o campo de celular.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (!telefoneRegex.test(phone)) {
-        messageBox.innerHTML = 'Por favor, insira um número de celular válido com 11 ou 10 números.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (hamburgueres === '') {
-        messageBox.innerHTML = 'Por favor, preencha o campo de hambúrgueres.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (endereco === '') {
-        messageBox.innerHTML = 'Por favor, preencha o campo de endereço.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (!enderecoRegex.test(endereco)) {
-        messageBox.innerHTML = 'Por favor, insira um endereço válido no formato: Cidade, Bairro, Rua, Número';
-        return; // interrompe a execução se houver erro
-    } else if (opcao === '') {
-        messageBox.innerHTML = 'Por favor, selecione a opção de retirada ou entrega.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (formapagamento === '') {
-        messageBox.innerHTML = 'Por favor, selecione a forma de pagamento.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    } else if (observacao === '') {
-        messageBox.innerHTML = 'Por favor, preencha o campo de observação.';
-        messageBox.className = "message error";
-        return; // interrompe a execução se houver erro
-    }
-
-    // Limpar os campos
-    document.getElementById("nome").value = '';
-    document.getElementById("phone").value = '';
-    document.getElementById("hamburgueres").value = '';
-    document.getElementById("bebida").value = '';
-    document.getElementById("endereco").value = '';
-    document.getElementById("opcao").value = '';
-    document.getElementById("formapagamento").value = '';
-    document.getElementById("observacao").value = '';
-
-
-    // Redefinir o contador de caracteres
-    const charCount = document.getElementById("charCount");
-    charCount.textContent = `Máximo de caracteres: ${maxLength}`;
-    document.getElementById("resumo").innerHTML = "";
-
-    // Exibir mensagem de sucesso no mesmo messagebox
-    messageBox.innerHTML = "Pedido enviado com sucesso!";
-    messageBox.className = "message success";
-    messageBox.style.display = "block";
-
-    setTimeout(function () {
-        messageBox.innerHTML = "";
-        messageBox.className = "message success";
-    }, 3000);
-}
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
 // Evento de escuta para cada checkbox
@@ -105,7 +23,6 @@ checkboxes.forEach(function (checkbox) {
     });
 });
 const form = document.getElementById("myForm");
-form.addEventListener("submit", validarPedido);
 
 // Função para formatar visualmente o campo de telefone
 function formatarTelefone(input) {
