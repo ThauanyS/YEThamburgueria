@@ -1,56 +1,4 @@
-function validar() {
-    const nome = document.getElementById("nome").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const assunto = document.getElementById("assunto").value;
-    const mensagem = document.getElementById("mensagem").value;
-    const messageBox = document.getElementById("messageBox");
-
-    const nomeSobrenomeRegex = /^[a-zA-Z]+\s[a-zA-Z]+$/;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phoneRegex = /^\(\d{2}\)\s\d{4,5}-\d{4}$/;
-
-    if (nome === '' || !nomeSobrenomeRegex.test(nome) || phone === '' || !phoneRegex.test(phone) || email === '' || !emailRegex.test(email) || assunto === '' || mensagem === '') {
-        // Exibir mensagem de erro no mesmo messagebox
-        messageBox.innerHTML = "Por favor, preencha todos os campos corretamente.";
-        messageBox.className = "message error";
-        return false; // Retorna false para impedir o envio do formulário
-    }
-
-    // Limpar os campos
-    document.getElementById("nome").value = '';
-    document.getElementById("email").value = '';
-    document.getElementById("phone").value = '';
-    document.getElementById("assunto").value = '';
-    document.getElementById("mensagem").value = '';
-
-    // Redefinir o contador de caracteres
-    const charCount = document.getElementById("charCount");
-    charCount.textContent = `Máximo de caracteres: ${maxLength}`;
-
-    // Exibir mensagem de sucesso no mesmo messagebox
-    messageBox.innerHTML = "Enviado com sucesso!";
-    messageBox.className = "message success";
-    messageBox.style.display = "block";
-
-    // Seleciona o elemento select
-    const selectElement = document.querySelector('select');
-
-    // Remove a classe "changed" quando o valor selecionado é alterado
-        selectElement.classList.remove('changed');
-
-    setTimeout(function () {
-        messageBox.innerHTML = "";
-        messageBox.className = "message success";
-    }, 3000);
-
-    return true; // Retorna true para permitir o envio do formulário
-}
-
 const form = document.getElementById("myForm");
-form.onsubmit = validar;
-
-
 
 // Função para formatar visualmente o campo de telefone
 function formatarTelefone(input) {
@@ -75,8 +23,6 @@ function formatarTelefone(input) {
     // Atualizar o valor do campo de entrada com o valor formatado
     input.value = formatado;
 }
-
-
 
 const textarea = document.getElementById("mensagem");
 const charCount = document.getElementById("charCount");
