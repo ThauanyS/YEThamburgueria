@@ -61,7 +61,7 @@
         ?>
 
         <!-- Campos do formulário -->
-        <form id="myForm" class="form" method="POST" action="../php/cliente.php">
+        <form id="myForm" class="form" method="POST" action="../PHPcomHTML/cliente.php">
             <div>
                 <img class="card" src="../imagem/cliente.png">
                 <p>Cadastre-se como nosso cliente e seja nosso cliente oficial!!!</p>

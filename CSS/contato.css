@@ -46,10 +46,19 @@ body {
 
 .container {
     display: flex;
+    flex-direction: column; /* Altere para um layout de coluna */
     justify-content: center;
     align-items: center;
     margin-bottom: 90px;
-    margin-top: 90px;
+    margin-top: 80px;
+}
+.container a {
+    background-color: #77dd77; /* Cor de fundo verde pastel */
+    padding: 10px 54px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    color: #000000; /* Cor do texto preto */
+    font-size: 16px; /* Tamanho da fonte */
+    margin-bottom: 5px;
 }
 
 .card {

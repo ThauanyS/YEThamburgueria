@@ -36,23 +36,35 @@ function formatarTelefone(input) {
 // Função para esconder as mensagens após 5 segundos
 window.onload = function () {
     setTimeout(function () {
-        const messages = document.querySelectorAll('.message');
+        const messages = document.querySelectorAll('#message');
         messages.forEach(function (message) {
             message.style.display = 'none';
         });
     }, 5000);
 };
-
+// Seleciona todos os elementos textarea na página
 const textareas = document.getElementsByTagName('textarea');
-const charCount = document.getElementById("charCount");
 const maxLength = 300;
 
-textarea.addEventListener("input", function () {
-    const currentLength = textarea.value.length;
-    const remainingLength = maxLength - currentLength;
+// Adiciona um ouvinte de eventos a todos os elementos textarea
+for (let i = 0; i < textareas.length; i++) {
+    const textarea = textareas[i];
+    const charCount = document.getElementById(`charCount${textarea.id}`);
 
-    charCount.textContent = `Máximo de caracteres: ${remainingLength}`;
-});
+    textarea.addEventListener("input", function () {
+        const currentLength = textarea.value.length;
+        const remainingLength = maxLength - currentLength;
+
+        charCount.textContent = `Máximo de caracteres restantes: ${remainingLength}`;
+        
+        // Limita o número de caracteres no textarea
+        if (currentLength > maxLength) {
+            textarea.value = textarea.value.substring(0, maxLength);
+        }
+    });
+}
+
+
 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 

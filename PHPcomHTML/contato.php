@@ -1,3 +1,30 @@
+<?php
+$_con = mysqli_connect('127.0.0.1', 'root', '', 'bd_yet');
+$message = '';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recupere os dados do formulário usando o método POST
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $celular = $_POST['celular'];
+    $assunto = $_POST['assunto'];
+    $mensagem = $_POST['mensagem'];
+
+    // Crie e execute a consulta de inserção
+    $query = "INSERT INTO contato (nome_con, assunto_con, mensagem_con, email_con, celular_con) 
+        VALUES ('$nome', '$assunto', '$mensagem', '$email', '$celular')";
+    $result = mysqli_query($_con, $query);
+
+    if ($result) {
+        $message = "Os dados foram cadastrados com sucesso.";
+    } else {
+        $message = "Erro ao cadastrar os dados: " . mysqli_error($_con);
+    }
+
+    mysqli_close($_con);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,30 +44,33 @@
         <a href="quem_somos.html">Quem somos</a>
         <a href="cardapio.html">Cardápio</a>
         <a href="promocao_do_dia.html">Promoção do Dia</a>
-        <a href="contato.html"> Contato</a>
+        <a href="contato.html">Contato</a>
         <a href="pedido.html">Pedido</a>
         <a href="reserva.html">Reserva</a>
         <a href="cliente.html">Cliente</a>
     </nav>
 
     <div class="container">
-        <!-- Campos do formulário -->
-        <form id="myForm" method="POST" action="../php/contato.php">
+        <?php if ($message !== '') { ?>
+            <a id="message"><?php echo $message; ?></a>
+            <img id="message" src="https://www.photofunky.net/output/image/d/b/0/e/db0e69/photofunky.gif" alt="GIF" width="100" height="100">
+        <?php } ?>
 
+        <!-- Campos do formulário -->
+        <form id="myForm" class="form" method="POST" action="../PHPcomHTML/contato.php">
             <div>
                 <img class="card" src="https://cdn-icons-png.flaticon.com/512/2776/2776451.png">
-                <p>Entre em contato conosco</h2>
+                <p>Entre em contato conosco</p>
             </div>
 
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" Name="nome" placeholder="Digite seu nome completo." required>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo." required>
 
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" placeholder="xxxxxxxx@xxxxx" required>
 
             <label for="phone">Celular:</label>
-            <input type="tel" id="phone" minlength="14" name="celular" maxlength="15" oninput="formatarTelefone(this)"
-            placeholder="(XX) XXXXX-XXXX" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required >
+            <input type="tel" id="phone" minlength="14" name="celular" maxlength="15" oninput="formatarTelefone(this)" placeholder="(XX) XXXXX-XXXX" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required>
 
             <label for="assunto">Selecione um assunto:</label>
             <select id="assunto" name="assunto" name="assunto" onchange="this.classList.add('changed')" required>
@@ -68,21 +98,18 @@
                     Solicitar informações sobre horário de funcionamento ou localização da hamburgueria</option>
             </select>
 
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" placeholder="..." maxlength="300" rows="4" cols="50"
-                    style="height: 90px" required></textarea>
-                <div class="carac" id="charCount">Máximo de caracteres: 300</div>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="Mensagem" name="mensagem" placeholder="..." maxlength="300" rows="4" cols="50" style="height: 90px" required></textarea>
+            <div class="carac" id="charCountMensagem">Máximo de caracteres: 300</div>
 
-            <div id="messageBox"></div>
             <button type="submit">Enviar</button>
         </form>
     </div>
 
     <!-- Para validar e manipular o formulário -->
-    <script src="../JS/contato.js"></script>
+    <script src="../JS/script-formulario.js"></script>
 
     <!-- Footer -->
-
     <footer class="footer">
         <div class="contact">
             <ul>
@@ -116,22 +143,7 @@
                 </div>
             </ul>
         </div>
-        </div>
-
-        <div class="bottom">
-            <ul>
-                <div>
-                    <a>Copyright © 2023 <span><a href="#">HAMBURGUERIA YET</a></span></a>
-
-                </div>
-                <div class="text">
-                    <p>A Hamburgueria YET traz um novo conceito em Hambúrguer! Pão especial, ingredientes selecionados e
-                        um hambúrguer elaborado para surpreender seus sentidos!</p>
-                </div>
-            </ul>
-        </div>
     </footer>
 </body>
-
 
 </html>
