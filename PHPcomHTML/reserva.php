@@ -11,16 +11,15 @@
 
 <body>
     <nav class="topnav">
-        <a href="index.html">Home</a>
-        <a href="quem_somos.html">Quem somos</a>
-        <a href="cardapio.html">Cardápio</a>
-        <a href="promocao_do_dia.html">Promoção do Dia</a>
-        <a href="contato.html"> Contato</a>
-        <a href="pedido.html">Pedido</a>
-        <a href="reserva.html">Reserva</a>
-        <a href="cliente.html">Cliente</a>
+        <a href="../html/index.html">Home</a>
+        <a href="../html/quem_somos.html">Quem somos</a>
+        <a href="../html/cardapio.html">Cardápio</a>
+        <a href="../html/promocao_do_dia.html">Promoção do Dia</a>
+        <a href="../PHPcomHTML/contato.php"> Contato</a>
+        <a href="../PHPcomHTML/pedido.php">Pedido</a>
+        <a href="../PHPcomHTML/reserva.php">Reserva</a>
+        <a href="../PHPcomHTML/cliente.php">Cliente</a>
     </nav>
-
     <?php
     $_con = mysqli_connect('127.0.0.1', 'root', '', 'bd_yet');
     $message = '';
@@ -50,11 +49,10 @@
     ?>
 
     <div class="container">
+
         <?php if ($message !== '') { ?>
-            <div id="message">
-                <?php echo $message; ?>
-                <img src="https://www.photofunky.net/output/image/d/b/0/e/db0e69/photofunky.gif" alt="GIF" width="100" height="100">
-            </div>
+            <a id="message"><?php echo $message; ?></a>
+            <img id="message" src="https://www.photofunky.net/output/image/d/b/0/e/db0e69/photofunky.gif" alt="GIF" width="100" height="100">
         <?php } ?>
 
         <form id="myForm" method="POST" action="../PHPcomHTML/reserva.php">
@@ -95,7 +93,7 @@
         </form>
     </div>
 
-    <script src="../JS/reserva.js"></script>
+    <script src="../JS/script-formulario.js"></script>
 
     <!-- Footer -->
     <footer class="footer">

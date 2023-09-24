@@ -12,14 +12,14 @@
 
 <body>
     <nav class="topnav">
-        <a href="index.html">Home</a>
-        <a href="quem_somos.html">Quem somos</a>
-        <a href="cardapio.html">Cardápio</a>
-        <a href="promocao_do_dia.html">Promoção do Dia</a>
-        <a href="contato.html"> Contato</a>
-        <a href="pedido.html">Pedido</a>
-        <a href="reserva.html">Reserva</a>
-        <a href="cliente.html">Cliente</a>
+        <a href="../html/index.html">Home</a>
+        <a href="../html/quem_somos.html">Quem somos</a>
+        <a href="../html/cardapio.html">Cardápio</a>
+        <a href="../html/promocao_do_dia.html">Promoção do Dia</a>
+        <a href="../PHPcomHTML/contato.php"> Contato</a>
+        <a href="../PHPcomHTML/pedido.php">Pedido</a>
+        <a href="../PHPcomHTML/reserva.php">Reserva</a>
+        <a href="../PHPcomHTML/cliente.php">Cliente</a>
     </nav>
     <?php
     $_con = mysqli_connect('127.0.0.1', 'root', '', 'bd_yet');
@@ -43,9 +43,9 @@
         $result = mysqli_query($_con, $query);
 
         if ($result) {
-            $message = "Pedido cadastrado com sucesso.";
+            $message = "Pedido enviado com sucesso.";
         } else {
-            $message = "Erro ao cadastrar o pedido: " . mysqli_error($_con);
+            $message = "Erro ao enviar o pedido: " . mysqli_error($_con);
         }
 
         mysqli_close($_con);
@@ -123,17 +123,13 @@
                 <div class="carac" id="charCountObservacao">Máximo de caracteres: 300</div>
             </div>
 
-            <h2>Resumo do Pedido:</h2>
-            <div id="resumo"></div><br><br>
-            <div class="btt">
-                <button type="button" class="rsm" onclick="atualizarResumo()">Atualizar Resumo</button>
-            </div>
             <button type="submit">Enviar</button>
             <div id="messageBox"></div>
         </form>
     </div>
     <script src="../JS/script-formulario.js"></script>
 
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="contact">

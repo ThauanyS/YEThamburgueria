@@ -86,35 +86,3 @@ checkboxes.forEach(function (checkbox) {
     });
 });
 
-// Função para atualizar o resumo do pedido
-function atualizarResumo() {
-    const nome = document.getElementById("nome").value;
-    const telefone = document.getElementById("phone").value;
-    const hamburgueres = document.getElementById("hamburgueres").value;
-    const bebida = document.getElementById("bebida").value;
-    const endereco = document.getElementById("endereco").value;
-    const molhos = document.getElementsByName("molhos[]");
-    const opcao = document.getElementById("opcao").value;
-    const formaPagamento = document.getElementById("formapagamento").value;
-    const observacao = document.getElementById("observacao").value;
-
-    let resumo = "<strong>Nome:</strong> " + nome + "<br>";
-    resumo += "<strong>Celular:</strong> " + telefone + "<br>";
-    resumo += "<strong>Hambúrgueres:</strong> " + hamburgueres + "<br>";
-    resumo += "<strong>Bebida:</strong> " + bebida + "<br>";
-    resumo += "<strong>Endereço:</strong> " + endereco + "<br>";
-    resumo += "<strong>Molhos:</strong> ";
-
-    for (let i = 0; i < molhos.length; i++) {
-        if (molhos[i].checked) {
-            resumo += molhos[i].value + ", ";
-        }
-    }
-
-    resumo = resumo.slice(0, -2) + "<br><br>";
-    resumo += "<strong>Retirada ou Entrega:</strong> " + opcao + "<br>";
-    resumo += "<strong>Forma de Pagamento:</strong> " + formaPagamento + "<br>";
-    resumo += "<strong>Observação:</strong> " + observacao + "<br>";
-
-    document.getElementById("resumo").innerHTML = resumo;
-}
