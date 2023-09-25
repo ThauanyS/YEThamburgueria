@@ -5,140 +5,138 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/layout.css">
     <link rel="icon" href="../imagem/YTE.jpg">
-    
     <title>HAMBURGUERIA YET</title>
 </head>
 
 <body>
-    <img src="../imagem/bg.jpg" class="bg">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+
+    <img src="../imagem/bg.jpg" class="bg" alt="Background">
 
     <section>
+        <!-- Cabeçalho da página -->
+        <header class="cabecalho">
+            <div class="logo">
+                <img src="../imagem/YTE.jpg" alt="Logo da YET">
+            </div>
+            <h1>Hamburgueria YET</h1>
+        </header>
 
-    <header class="cabecalho">
-        <div class="logo">
-            <img src="../imagem/YTE.jpg" alt="">
-        </div>
-        <h1>Hamburgueria YET</h1>
-    </header>
+        <!-- Navegação -->
+        <nav class="topnav">
+            <a href="index.html">Home</a>
+            <a href="quem_somos.html">Quem somos</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="promocao_do_dia.html">Promoção do Dia</a>
+            <a href="../PHPcomHTML/contato.php"> Contato</a>
+            <a href="../PHPcomHTML/pedido.php">Pedido</a>
+            <a href="../PHPcomHTML/reserva.php">Reserva</a>
+            <a href="../PHPcomHTML/cliente.php">Cliente</a>
+        </nav>
 
-    <nav class="topnav">
-        <a href="index.html">Home</a>
-        <a href="quem_somos.html">Quem somos</a>
-        <a href="cardapio.html">Cardápio</a>
-        <a href="promocao_do_dia.html">Promoção do Dia</a>
-        <a href="../PHPcomHTML/contato.php"> Contato</a>
-        <a href="../PHPcomHTML/pedido.php">Pedido</a>
-        <a href="../PHPcomHTML/reserva.php">Reserva</a>
-        <a href="../PHPcomHTML/cliente.php">Cliente</a>
-    </nav>
+        <!-- Conteúdo principal -->
+        <div class="principal">
 
+            <div class="newImg">
+                <img src="../imagem/newImg.png" alt="Imagem NEW">
+                <h1>Novidades!</h1>
+            </div>
 
-    <main class="principal">
-        <div class="novo">
-            <img src="../imagem/PngItem_169110.png" alt="">
-            <h1>Novidades!</h1>
-
-        </div>
-        <div class="linha">
-
-            <div class="nov">
-                <nav class="Link">
-                    <a href="../HTML/biggerYET.html"><img src="../imagem/big-yet-thumb.png" alt="">
-                        <p href="../HTML/biggerYET.html">Bigger YET
+            <!-- Carrossel de imagens -->
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <!-- Indicadores do carrossel -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </div>
+                <!-- Itens do carrossel -->
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <a href="../HTML/cardapio/stackerCheddar.html">
+                            <div class="d-flex align-items-center justify-content-center h-100">
+                                <img src="../imagem/Mega-Stacker-Cheddar-3.0.png" class="d-block w-50 " alt="...">
+                            </div>
+                            <!-- Legenda do slide 1 -->
+                            <div class="carousel-caption">
+                                <h5>Stacker Cheddar</h5>
+                                <p href="../HTML/cardapio/biggerYET.html">O sabor que te faz sorrir a cada mordida, uma
+                                    explosão de queijo e felicidade em cada camada!</p>
+                        </a>
+                    </div>
+                </div>
+                    <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <a href="../HTML/cardapio/bigDelicia.html">
+                        <div class="d-flex align-items-center justify-content-center h-100">
+                            <img src="../imagem/bigDelicia.png" class="d-block w-50" alt="...">
+                        </div>
+                        <!-- Legenda do slide 2 -->
+                        <div class="carousel-caption">
+                            <h5>Big Delícia</h5>
+                            <p>O hambúrguer que não é só grande em tamanho, mas também em sabor, é o 'BIG-delicinha'!"
+                            </p>
+                        </div>
                     </a>
-                </nav>
+                </div>
+            </div>
+            <!-- Controles do carrossel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Seção de boas-vindas -->
+        <div class="welcomePag">
+            <h1>Seja bem-vindo!</h1>
+
+            <div class="content">
+                <h2>ツ Pode entrar, fique à vontade, a YET é toda sua!</h2>
+                <img src="https://www.photofunky.net/output/image/d/3/f/9/d3f9e2/photofunky.gif" alt="">
             </div>
 
-            <div class="nov">
-                <nav class="Link">
-                    <a href="../HTML/bigDelicia.html"><img src="../imagem/Furioso-thumb.png" alt="">
-                        <p href="../HTML/bigDelicia.html">Big Delicia
-                    </a>
-                </nav>
-            </div>
-
-
+            <img class="HambW" src="../imagem/welcome - Copia.png" alt="">
+            <p> Venha conhecer a YET e surpreenda-se com todos os nossos diferenciais. Prezamos, muito, pela excelência,
+                para que você tenha a melhor experiência possível! </p>
         </div>
 
-
-
-    </main>
-
-
-    <main class="paginat">
-
-
-        <div class="welcome">
-            <div class="pag2">
-
-                <h1>Seja bem-vindo!</h1>
-                <h2> ツ
-                    Pode entrar, fique à vontade, a YET é toda sua!</h2>
-
-                <img src="../imagem/welcome - Copia.png" alt="">
-
-                <p> Venha conhecer a YET e surpreenda-se com todos os
-                    nossos diferenciais. Prezamos, muito, pela excelência, para que você tenha a melhor experiência
-                    possível! </p>
-
-            </div>
-
-        </div>
-
-
-    </main>
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="contact">
+        <!-- Rodapé -->
+        <footer class="footer">
             <ul>
-                <div>
-                    <a>Delivery</a>
-                </div>
-
-                <div>
-                    <a>(69) 3422-9902</a>
-                </div>
-
-                <div>
-                    <a>(69) 99935-6547 (WhatsApp) </a>
-                </div>
+                <li>Delivery</li>
+                <li>(69) 3422-9902</li>
+                <li>(69) 99935-6547 (WhatsApp)</li>
+                <li>Rua Seis de Maio, 991</li>
+                <li>URUPÁ</li>
+                <li>JI-PARANÁ</li>
+                <li>RONDÔNIA</li>
+                <li>
+                    Copyright © 2023 <a href="#">HAMBURGUERIA YET</a>
+                </li>
+                <li>
+                    A Hamburgueria YET traz um novo conceito em Hambúrguer! Pão especial,
+                    ingredientes selecionados e um hambúrguer elaborado para surpreender
+                    seus sentidos!
+                </li>
             </ul>
-        </div>
+        </footer>
 
-        <div class="end">
-            <ul>
-                <div>
-                    <a>Rua Seis de Maio, 991</a>
-                </div>
-                <div>
-                    <a>URUPÁ</a>
-                </div>
-                <div>
-                    <a>JI-PARANÁ</a>
-                </div>
-                <div>
-                    <a>RONDÔNIA</a>
-                </div>
-            </ul>
-        </div>
-        </div>
-
-        <div class="bottom">
-            <ul>
-                <div>
-                    <a>Copyright © 2023 <span><a href="#">HAMBURGUERIA YET</a></span></a>
-
-                </div>
-                <div class="text">
-                    <p>A Hamburgueria YET traz um novo conceito em Hambúrguer! Pão especial, ingredientes selecionados e
-                        um hambúrguer elaborado para surpreender seus sentidos!</p>
-                </div>
-            </ul>
-        </div>
-    </footer>
-</section>
+    </section>
 
 </body>
 

@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../imagem/cliente.png">
+    <link rel="icon" href="../imagem/cliente.png">
     <link rel="stylesheet" href="../CSS/cliente.css">
     <title>Cadastrar Cliente</title>
-
-
 </head>
 
 <body>
@@ -87,7 +85,6 @@
 
     </div>
 
-    <!-- Para validar e manipular o formulário -->
     <script src="../JS/script-formulario.js"></script>
 
     <!-- Footer -->

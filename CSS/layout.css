@@ -1,19 +1,18 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Lato', sans-serif;
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
-section{
+section {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
 }
+
 body .bg {
     position: absolute;
     top: 0;
@@ -23,13 +22,13 @@ body .bg {
     object-fit: cover;
     pointer-events: none;
 }
+
 .cabecalho {
     padding: 80px;
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px ;
+    border-top-right-radius: 10px;
     background-color: #da0202;
 }
-
 
 .cabecalho h1 {
     font-size: 60px;
@@ -37,14 +36,21 @@ body .bg {
     text-align: center;
 }
 
+.logo img {
+    float: left;
+    width: 150px;
+}
+
 .topnav {
     overflow: hidden;
-    background-color:#ff771e;
+    background-color: #ff771e;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     text-align: center;
     position: sticky;
     top: 0;
+    z-index: 1000;
+
 }
 
 .topnav a {
@@ -57,103 +63,102 @@ body .bg {
 }
 
 .topnav a:hover {
-    background-color:rgb(255, 72, 0);
+    background-color: rgb(255, 72, 0);
     color: rgb(253, 253, 253);
     border-bottom: solid 2px #ffff98;
     border-radius: 11px;
 }
-.Link p, a {
-    text-decoration: none;
-    color: black;
-}
-.nov {
-    float: left;
-}
 
-.nov img {
-   width: 460px;
-}
-
+/* Estilos para a seção principal */
 .principal {
     padding-bottom: 200px;
     text-align: center;
     margin-top: 50px;
+}
 
-}
-.linha {
-    display: inline-block;
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
-    padding-top: 80px;
-    padding-bottom: 80px;
-    margin-top: 20px;
-    text-align: center;
-    background-color:#fc500059;
-    border-radius: 20px;
-    border: solid 2px #ffffff;
-    text-decoration: none;
-    color: black;
-}
 .principal p {
     font-size: 22px;
 }
+
 .principal h1 {
     padding: 20px;
- font-size: 50px;
- font-weight: normal;
- text-align: left;
-}
-.novo img {
-    width: 150px;
-    float:left;
+    font-size: 50px;
+    font-weight: normal;
+    text-align: left;
 }
 
-.logo img {
-    float: left;
+.newImg img {
     width: 150px;
+    float: left;
 }
-.imagem {
-    width: 100%;
-    padding: 20px;
+
+/* CSS personalizado para adicionar o estilo de fundo ao carrossel */
+.carousel-inner {
+    width: 1100px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: #fc500059;
+    border-radius: 20px;
+    border: solid 2px #ffffff;
+    text-align: center;
 }
+
+.carousel-caption a {
+    text-decoration: none;
+}
+/* Estilos para a seção de boas-vindas */
+.welcomePag {
+    background-color: darkorange;
+    padding: 45px 45px 60px;
+    margin: 0;
+    text-align: center;
+}
+
+.welcomePag h1 {
+    background-color: rgba(255, 209, 5, 0.808);
+    font-size: 48px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.content img {
+    margin: -9px 0 0 -1px;
+    max-width: 120px;
+    height: auto;
+}
+
+.content h2 {
+    margin-top: 30px;
+}
+
+.welcomePag .HambW {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.welcomePag p {
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+/* Estilos para o rodapé */
 .footer {
     padding: 20px;
     text-align: center;
     font-size: 18px;
-    background-color:  rgb(236, 41, 41);
+    background-color: rgb(236, 41, 41);
 }
 
-.footer a, .footer p {
+.footer ul,
+a {
     color: aliceblue;
-}
-
-.paginat {
-    background-color:darkorange;
-    padding: 45px;
-    margin: 0px;
-    padding-bottom: 150px ;
-    padding-top: 80px ;
- }
-
- .welcome h1 {
- background-color: rgba(255, 209, 5, 0.808);
- text-align: center;
- font-size: 48px;
- border-radius: 10px;
- padding: 10px ;
- }
-
-.pag2 p  {
-    text-align: center;
-    font-size: 25px;
+    list-style: none;
 
 }
-
- .pag2 img {
-    width: 50%;
-    margin-left: 290px;
-    margin-bottom: 20px ;
-    margin-top: 30px ;
-
- }
-
- 
