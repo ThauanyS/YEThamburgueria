@@ -1,59 +1,38 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Lato', sans-serif;
-    }
 
-section{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
-body .bg {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-object-fit: cover;
-pointer-events: none;
-}
+
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-  
-
 }
 
-.container img{
-width: 80%;
+.promocao img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
 }
-.l img{
+
+.heartGif img {
     width: 60px;
 }
-.principal {
-  
-        padding-bottom: 80px;
-        /* Define a largura como 320px */
-        /* Define o preenchimento interno */
-        background:#ffb81e;
-        /* Define o fundo com uma cor semitransparente */
-        border: 1px solid #ccc;
-        /* Define uma borda sólida com cor cinza */
-        border-radius: 5px;
-        /* Define as bordas arredondadas */
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.658);
-        margin-bottom: 10%;
 
-   
+.principalP {
+    padding-bottom: 80px;
+    background: #ffb81e;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.658);
+    margin-bottom: 10%;
 }
 
 body h1 {
@@ -62,55 +41,16 @@ body h1 {
 }
 
 body h2 {
-
     margin-left: 30px;
     font-weight: normal;
     font-size: 25px;
     text-align: center;
 }
 
-.ing {
+.ingredientes {
 
     font-size: 30px;
     text-align: center;
 
 }
 
-
-.topnav {
-    overflow: hidden;
-    background-color: #ff771e;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-}
-
-.topnav a {
-    display: inline-block;
-    color: whitesmoke;
-    padding: 12px 26px;
-    text-decoration: none;
-    text-align: right;
-    font-size: 16pt;
-}
-
-.topnav a:hover {
-    background-color: rgb(255, 72, 0);
-    color: rgb(253, 253, 253);
-    border-bottom: solid 2px #ffff98;
-    border-radius: 11px;
-}
-
-.footer {
-    padding: 20px;
-    text-align: center;
-    font-size: 18px;
-    background-color: rgb(236, 41, 41);
-}
-
-.footer a,
-.footer p {
-    color: aliceblue;
-}

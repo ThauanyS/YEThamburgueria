@@ -1,49 +1,9 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Lato', sans-serif;
-}
-
-
-section{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
-}
-body .bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-}
-
-.nov {
-    width: 255px;
-    display: inline-block;
-    margin: 49px;
-    text-align:end;
-    font-size: 24px;
-}
-
-
-.Link p, a {
-    text-decoration: none;
-    color: black;
-}
-
-.novt p {
-    text-align: right;
-    font-size: 24px;
-}
 
 .linha {
+    display: flex; /* Tornar o conteúdo um flex container */
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
     padding: 0px;
     margin: 70px;
     background-color: #fefe65;
@@ -52,9 +12,30 @@ body .bg {
     width: 1250px;
     height: 450px;
     box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
-
-
 }
+
+/* Estilos para os links dos hambúrgueres (.nov) */
+.nov {
+    display: flex; /* Tornar os links flex items */
+    flex-direction: column; /* Coluna para que fiquem empilhados verticalmente */
+    align-items: center; /* Centralizar horizontalmente */
+    margin: 0 20px; /* Espaçamento entre os links */
+    text-align: center; /* Centralizar o texto */
+    font-size: 24px;
+}
+
+.nov p, a, .novm p, a, .novmi p, a, .linhab a, p {
+    text-decoration: none;
+    color: black;
+    margin-right: -25px;
+}
+
+.novt p {
+    text-align: right;
+    font-size: 24px;
+}
+
+
 .container {
     display: flex;
     justify-content: center;
@@ -117,10 +98,11 @@ body .bg {
     display: inline-block;
     margin: 47px;
 }
-.del {
+
+
+.favImg {
     width: 70px;
-    float: right;
-    margin: 13px;
+    margin-right: 10px; /* Adicione margem à direita da imagem */
 }
 .de {
     width: 90px;
@@ -129,19 +111,7 @@ body .bg {
 }
 .deli {
     width: 145px;
-    float: right;
-}
-
-
-.topnav {
-    overflow: hidden;
-    background-color:#ff771e;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-   
+    float: left;
 }
 
 .novm img{
@@ -165,7 +135,7 @@ body .bg {
     
 }
 .linham{
-margin: 90px;
+margin: 80px;
 background-color: #e1ff60;
 padding: 40px;
 font-size: 24px;
@@ -187,24 +157,10 @@ border: none;
     margin-left: 170px;
 }
 
-.topnav a {
-    display: inline-block;
-    color: whitesmoke;
-    padding: 12px 26px;
-    text-decoration: none;
-    text-align: right;
-    font-size: 16pt;
-}
 .linham h4 {
     text-align:center ;
     font-size: 25px;
     font-weight:normal;
-}
-.topnav a:hover {
-    background-color:rgb(255, 72, 0);
-    color: rgb(253, 253, 253);
-    border-bottom: solid 2px #ffff98;
-    border-radius: 11px;
 }
 
 
@@ -277,16 +233,4 @@ height: 900px;
 .bebpag{
 border: none;
 
-}
-
-
-.footer {
-    padding: 20px;
-    text-align: center;
-    font-size: 18px;
-    background-color:  rgb(236, 41, 41);
-}
-
-.footer a, .footer p {
-    color: aliceblue;
 }

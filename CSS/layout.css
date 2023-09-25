@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
+
 body {
     background-image: url("../imagem/bg.jpg");
     background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
@@ -62,17 +63,17 @@ body {
 }
 
 /* Estilos para a seção principal */
-.principal {
+.principalM {
     padding-bottom: 200px;
     text-align: center;
     margin-top: 50px;
 }
 
-.principal p {
+.principalM p {
     font-size: 22px;
 }
 
-.principal h1 {
+.principalM h1 {
     padding: 20px;
     font-size: 50px;
     font-weight: normal;
