@@ -1,236 +1,153 @@
-
-
-.linha {
-    display: flex; /* Tornar o conteúdo um flex container */
-    justify-content: center; /* Centralizar horizontalmente */
-    align-items: center; /* Centralizar verticalmente */
-    padding: 0px;
-    margin: 70px;
-    background-color: #fefe65;
-    border: solid 2px #fce301;
-    border-radius: 10px;
-    width: 1250px;
-    height: 450px;
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
+.cardImg img {
+    width: 75px;
+    float: left;
 }
 
-/* Estilos para os links dos hambúrgueres (.nov) */
-.nov {
-    display: flex; /* Tornar os links flex items */
-    flex-direction: column; /* Coluna para que fiquem empilhados verticalmente */
-    align-items: center; /* Centralizar horizontalmente */
-    margin: 0 20px; /* Espaçamento entre os links */
-    text-align: center; /* Centralizar o texto */
-    font-size: 24px;
+.cardImg { 
+    margin-top: 20px;
+    font-size: 25px;
 }
-
-.nov p, a, .novm p, a, .novmi p, a, .linhab a, p {
-    text-decoration: none;
-    color: black;
-    margin-right: -25px;
+.text {
+    font-size: 22px;
+    font-weight: normal;
+    color: rgb(59, 1, 1);
+    margin-bottom: 0px;
+    text-align: center;
 }
-
-.novt p {
-    text-align: right;
-    font-size: 24px;
-}
-
 
 .container {
     display: flex;
     justify-content: center;
 }
 
-.text {
-    font-size: 22px;
-    font-weight:normal;
-    color:rgb(59, 1, 1);
-    margin-bottom: 0px;
+.linha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 70px;
+    background-color: #fefe65;
+    border: solid 2px #fce301;
+    border-radius: 10px;
+    width: 1250px;
+    height: 450px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
+}
+
+.nov {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
     text-align: center;
-
+    font-size: 24px;
 }
 
-.texti img {
-    float: right;
-    width: 100px;
+.linha p,
+a,
+.linham p,
+a,
+.linhab a,
+p {
+    text-decoration: none;
+    color: black;
+    margin-right: -25px;
 }
-.linha2 {
-    margin: 70px;
-    padding: 0px;
-    background-color: #fefe65;
-    border: solid 2px #fce301;
+
+.linhaM {
+    margin: 80px;
+    background-color: #e1ff60;
+    padding: 40px;
+    font-size: 24px;
+    border: solid 2px #72a300;
     border-radius: 10px;
-    width: 1250px;
-    height: 450px;
+    width: 1300px;
+    height: 900px;
     box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
-
-}
-
-.linham{
-    background-color: #fff079;
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
-
-}
-.linha3 {
-    padding: 0px;
-    background-color: #fefe65;
-    margin: 70px;
-    border: solid 2px #fce301;
-    border-radius: 10px;
-    width: 1250px;
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
-
-    height: 450px;
-
-}
-.card img {
-    width: 75px;
-    float:left;
-}
-
-.card
-{
-    margin-top: 20px;
+    text-align: center;
     font-size: 25px;
-}
-.novt { 
-    width: 250px;
-    display: inline-block;
-    margin: 47px;
+    font-weight: normal;
+
 }
 
-
-.favImg {
-    width: 70px;
-    margin-right: 10px; /* Adicione margem à direita da imagem */
-}
-.de {
-    width: 90px;
-    float: right;
-    margin: 13px;
-}
-.deli {
-    width: 145px;
-    float: left;
-}
-
-.novm img{
+.novM img {
     width: 340px;
-    
+
 }
 
-.novm {
+.novM {
     display: inline-block;
     margin-left: 28px;
     margin-top: 70px;
     padding: 0px;
 }
 
-.novm p {
+.novM p {
     text-align: center;
 }
 
-.novmi img{
+.novMi img {
     width: 300px;
-    
-}
-.linham{
-margin: 80px;
-background-color: #e1ff60;
-padding: 40px;
-font-size: 24px;
-border: solid 2px #72a300;
-border-radius: 10px;
-width: 1300px;
-height: 900px;
-box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
 
 }
 
-.molhopag{
-border: none;
-}
-
-.novmi {
+.novMi {
     display: inline-block;
     text-align: center;
     margin-left: 170px;
 }
 
-.linham h4 {
-    text-align:center ;
-    font-size: 25px;
-    font-weight:normal;
+
+.linhaB {
+    margin: 60px;
+    background-color: #ffb158;
+    padding: 0px;
+    font-size: 24px;
+    border: solid 2px #ff771e;
+    border-radius: 10px;
+    width: 1300px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
+    height: 900px;
 }
 
-
-.novb img{
+.novB img {
     width: 302px;
-    
 }
 
-.novbI img {
-    width: 310px;
-}
-
-.novbl img{
-    width: 220px;
-    
-}
-
-.novbI {
-    display: inline-block;
-    padding: 0px;
-    text-align: center;
-}
-
-.novbs img {
-    width: 220px;
-    margin-left: 90px;
-
-
-}
-.novbs {
-    display: inline-block;
-    margin-left: 50px;
-}
-
-.novbu img {
-    width: 220px;
-    margin-left: 50px;
-}
-
-.novbu {
-    display: inline-block;
-    margin-left: 22px;
-}
-.novbl {
-    display: inline-block;
-    margin-left:55px;
-    padding: 0px;
-    text-align: center;
-}
-
-.novb {
+.novB {
     display: inline-block;
     margin: 30px;
     text-align: center;
 }
 
-
-.linhab{
-margin: 60px;
-background-color: #ffb158;
-padding: 0px;
-font-size: 24px;
-border: solid 2px #ff771e;
-border-radius: 10px;
-width: 1300px;
-box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
-height: 900px;
+.novBi img {
+    width: 220px;
+    margin-left: 50px;
 }
 
-.bebpag{
-border: none;
+.novBi {
+    display: inline-block;
+    margin-left: 22px;
+}
 
+.novBii img {
+    width: 220px;
+
+}
+
+.novBii {
+    display: inline-block;
+    margin-left: 55px;
+    padding: 0px;
+    text-align: center;
+}
+
+.novBiii img {
+    width: 220px;
+    margin-left: 90px;
+}
+
+.novBiii {
+    display: inline-block;
+    margin-left: 50px;
 }
