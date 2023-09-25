@@ -25,7 +25,7 @@ body .bg {
 }
 
 .nov {
-    width: 259px;
+    width: 255px;
     display: inline-block;
     margin: 49px;
     text-align:end;
@@ -64,7 +64,7 @@ body .bg {
     font-size: 22px;
     font-weight:normal;
     color:rgb(59, 1, 1);
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     text-align: center;
 
 }
@@ -113,7 +113,7 @@ body .bg {
     font-size: 25px;
 }
 .novt { 
-    width: 255px;
+    width: 250px;
     display: inline-block;
     margin: 47px;
 }
