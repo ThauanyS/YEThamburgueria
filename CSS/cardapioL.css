@@ -61,7 +61,7 @@ p {
     font-size: 24px;
     border: solid 2px #72a300;
     border-radius: 10px;
-    width: 1300px;
+    width: 1200px;
     height: 900px;
     box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
     text-align: center;
@@ -94,7 +94,7 @@ p {
 .novMi {
     display: inline-block;
     text-align: center;
-    margin-left: 170px;
+    margin-left: 100px;
 }
 
 
@@ -105,7 +105,7 @@ p {
     font-size: 24px;
     border: solid 2px #ff771e;
     border-radius: 10px;
-    width: 1300px;
+    width: 1200px;
     box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
     height: 900px;
 }
