@@ -1,4 +1,4 @@
-/* Estilos globais */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -145,6 +145,7 @@ body {
     padding: 20px;
     text-align: center;
     font-size: 18px;
+    clear: both;
     background-color: rgb(236, 41, 41);
 }
 

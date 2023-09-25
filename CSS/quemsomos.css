@@ -1,0 +1,92 @@
+/* Estilos para a classe container que envolve as caixas .info */
+.container {
+    display: flex;
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    background-color: rgba(247, 82, 6, 0.296); /* Laranja semi-transparente */
+    padding: 20px; /* Espaçamento interno da caixa .container */
+    width: 1000px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o conteúdo dentro do container */
+    border: 1px solid #ffffff;
+    margin-bottom: 15%;
+}
+
+/* Estilos para a seção principal */
+.part1 {
+    margin-top: 50px;
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.part1 p {
+    font-size: 22px;
+    margin-top: 0; /* Remove a margem superior padrão do parágrafo */
+}
+
+.part1 h1 {
+    padding: 20px;
+    font-size: 50px;
+    font-weight: normal;
+    text-align: left;
+}
+.info-container {
+    display: flex; /* Usando flexbox para alinhar os elementos lado a lado */
+    justify-content: center; /* Distribui o espaço entre os elementos */
+}
+
+.info {
+    text-align: left;
+    padding: 20px; /* Espaçamento interno da caixa .info */
+    border: 1px solid #f54702;
+    border-radius: 20px;
+    width: 40%; /* Largura das caixas .info (48% para acomodar a margem) */
+    margin-right: 100px; /* Adicione uma margem direita para criar espaço entre as caixas */
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos para a última caixa .info (remover margem direita) */
+.info:last-child {
+    margin-right: 0; /* Remove a margem direita da última caixa */
+}
+
+
+.info img {
+    width: 40%;
+    height: auto;
+    /* Estilos para centralizar imagens dentro das divs .info */
+    display: block; /* Define a imagem como bloco para centralizar horizontalmente */
+    margin: 0 auto; /* Centraliza horizontalmente */
+
+    border-radius: 10%; /* Arredonda as bordas da imagem */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+}
+
+/* Estilos para o contêiner do cabeçalho (imagem + h1) */
+.header-content {
+    display: flex; /* Usa flexbox para alinhar os elementos lado a lado */
+    align-items: center; 
+    margin-top: -40px;
+}
+
+/* Estilos para a imagem dentro do cabeçalho */
+.header-content img {
+    max-width: 160px; /* Define a largura máxima da imagem */
+    height: auto;
+    margin-right: 20px; /* Espaçamento à direita do h1 */
+    margin-right: -20px;
+}
+
+/* Estilos para o texto dentro das caixas .info */
+.info p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: black;
+}
+
+/* Estilos para o rodapé */
+.footer {
+    clear: both;
+    /* Outras propriedades do rodapé aqui */
+}
