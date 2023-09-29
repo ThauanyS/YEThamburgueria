@@ -61,7 +61,7 @@ p {
     font-size: 24px;
     border: solid 2px #72a300;
     border-radius: 10px;
-    width: 1200px;
+    width: 1150px;
     height: 900px;
     box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
     text-align: center;
@@ -77,7 +77,7 @@ p {
 
 .novM {
     display: inline-block;
-    margin-left: 28px;
+    margin-left: 0px;
     margin-top: 70px;
     padding: 0px;
 }
@@ -94,7 +94,7 @@ p {
 .novMi {
     display: inline-block;
     text-align: center;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 
@@ -105,7 +105,7 @@ p {
     font-size: 24px;
     border: solid 2px #ff771e;
     border-radius: 10px;
-    width: 1200px;
+    width: 1150px;
     box-shadow: 0 30px 70px rgba(0, 0, 0, 0.959);
     height: 900px;
 }
@@ -116,23 +116,22 @@ p {
 
 .novB {
     display: inline-block;
-    margin: 30px;
+    margin: 25px;
     text-align: center;
 }
 
 .novBi img {
     width: 220px;
-    margin-left: 50px;
+    margin-left: 60px;
 }
 
 .novBi {
     display: inline-block;
-    margin-left: 22px;
+    margin-left: 32px;
 }
 
 .novBii img {
     width: 220px;
-
 }
 
 .novBii {
@@ -144,10 +143,10 @@ p {
 
 .novBiii img {
     width: 220px;
-    margin-left: 90px;
+    margin-left: 60px;
 }
 
 .novBiii {
     display: inline-block;
-    margin-left: 50px;
+    margin-left: 60px;
 }
