@@ -33,6 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/contato.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
     <link rel="icon" href="../imagem/YTE.jpg">
     <title>Contato</title>
 </head>
@@ -111,38 +112,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="contact">
-            <ul>
-                <div>
-                    <a>Delivery</a>
-                </div>
-
-                <div>
-                    <a>(69) 3422-9902</a>
-                </div>
-
-                <div>
-                    <a>(69) 99935-6547 (WhatsApp) </a>
-                </div>
-            </ul>
-        </div>
-
-        <div class="end">
-            <ul>
-                <div>
-                    <a>Rua Seis de Maio, 991</a>
-                </div>
-                <div>
-                    <a>URUPÁ</a>
-                </div>
-                <div>
-                    <a>JI-PARANÁ</a>
-                </div>
-                <div>
-                    <a>RONDÔNIA</a>
-                </div>
-            </ul>
-        </div>
+        <ul>
+            <li>Delivery</li>
+            <li>(69) 3422-9902</li>
+            <li>(69) 99935-6547 (WhatsApp)</li>
+            <li>Rua Seis de Maio, 991</li>
+            <li>URUPÁ</li>
+            <li>JI-PARANÁ</li>
+            <li>RONDÔNIA</li>
+            <li>
+                Copyright © 2023 <a href="#">HAMBURGUERIA YET</a>
+            </li>
+            <li>
+                A Hamburgueria YET traz um novo conceito em Hambúrguer! Pão especial,
+                ingredientes selecionados e um hambúrguer elaborado para surpreender
+                seus sentidos!
+            </li>
+        </ul>
     </footer>
 </body>
 
