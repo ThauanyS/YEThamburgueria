@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/contato.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="icon" href="../imagem/YTE.jpg">
+    <title>Contato</title>
+</head>
+
+<body>
+
+    <nav class="topnav">
+        <a href="../html/index.html">Home</a>
+        <a href="../html/quem_somos.html">Quem somos</a>
+        <a href="../html/cardapio.html">Cardápio</a>
+        <a href="../html/promocao_do_dia.html">Promoção do Dia</a>
+        <a href="../PHPcomHTML/contato.php"> Contato</a>
+        <a href="../PHPcomHTML/pedido.php">Pedido</a>
+        <a href="../PHPcomHTML/reserva.php">Reserva</a>
+        <a href="../PHPcomHTML/cliente.php">Cliente</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- Campos do formulário -->
+        <form id="myForm" class="form" method="POST" action="../PHPcomHTML/contato.php">
+            <div>
+                <img class="card" src="https://cdn-icons-png.flaticon.com/512/2776/2776451.png">
+                <p>Entre em contato conosco</p>
+            </div>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo." required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="xxxxxxxx@xxxxx" required>
+
+            <label for="phone">Celular:</label>
+            <input type="tel" id="phone" minlength="14" name="celular" maxlength="15" oninput="formatarTelefone(this)" placeholder="(XX) XXXXX-XXXX" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required>
+
+            <label for="assunto">Selecione um assunto:</label>
+            <select id="assunto" name="assunto" name="assunto" onchange="this.classList.add('changed')" required>
+                <option value=""></option>
+                <option value="Fazer um pedido">Fazer um pedido</option>
+                <option value="Consulta sobre o cardápio">Consulta sobre o cardápio</option>
+                <option value="Solicitar informações sobre alergias alimentares">Solicitar informações sobre alergias
+                    alimentares</option>
+                <option value="Feedback ou sugestões">Feedback ou sugestões</option>
+                <option value="Parcerias ou eventos especiais">Parcerias ou eventos especiais</option>
+                <option value="Outras perguntas ou dúvidas">Outras perguntas ou dúvidas</option>
+                <option value="Reportar um erro no site ou aplicativo">Reportar um erro no site ou aplicativo</option>
+                <option value="Enviar currículo para oportunidades de emprego">Enviar currículo</option>
+                <option value="Reclamação ou problema com um pedido">Reclamação ou problema com um pedido</option>
+                <option value="Agendar uma reserva ou evento">Agendar uma reserva ou evento</option>
+                <option value="Solicitar informações sobre promoções ou descontos">Solicitar informações sobre promoções
+                    ou descontos</option>
+                <option value="Consulta sobre opções vegetarianas ou veganas">Consulta sobre opções vegetarianas ou
+                    veganas</option>
+                <option value="Solicitar informações sobre opções de catering ou entrega em eventos">Solicitar
+                    informações sobre opções de catering ou entrega em eventos</option>
+                <option value="Solicitar informações sobre opções de pagamento ou formas de entrega">Solicitar
+                    informações sobre opções de pagamento ou formas de entrega</option>
+                <option value="Solicitar informações sobre horário de funcionamento ou localização da hamburgueria">
+                    Solicitar informações sobre horário de funcionamento ou localização da hamburgueria</option>
+            </select>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="Mensagem" name="mensagem" placeholder="..." maxlength="300" rows="4" cols="50" style="height: 90px" required></textarea>
+            <div class="carac" id="charCountMensagem">Máximo de caracteres: 300</div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Para validar e manipular o formulário -->
+    <script src="../JS/script-formulario.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <ul>
+            <li>Delivery</li>
+            <li>(69) 3422-9902</li>
+            <li>(69) 99935-6547 (WhatsApp)</li>
+            <li>Rua Seis de Maio, 991</li>
+            <li>URUPÁ</li>
+            <li>JI-PARANÁ</li>
+            <li>RONDÔNIA</li>
+            <li>
+                Copyright © 2023 <a href="#">HAMBURGUERIA YET</a>
+            </li>
+            <li>
+                A Hamburgueria YET traz um novo conceito em Hambúrguer! Pão especial,
+                ingredientes selecionados e um hambúrguer elaborado para surpreender
+                seus sentidos!
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

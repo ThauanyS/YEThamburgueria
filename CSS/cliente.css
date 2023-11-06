@@ -1,49 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-}
-
-body h1 {
-    margin-top: 50px;
-}
-body {
-    background-image: url('../imagem/bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-}
-
-.topnav {
-    overflow: hidden;
-    background-color: #ff771e;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-}
-
-.topnav a {
-    color: whitesmoke;
-    padding: 12px 26px;
-    text-decoration: none;
-    text-align: right;
-    font-size: 16pt;
-}
-
-.topnav a:hover {
-    background-color: rgb(255, 72, 0);
-    color: rgb(253, 253, 253);
-    border-bottom: solid 2px #ffff98;
-    border-radius: 11px;
-}
 .container {
     display: flex;
     flex-direction: column; /* Altere para um layout de coluna */
@@ -60,8 +15,6 @@ body {
     font-size: 16px; /* Tamanho da fonte */
     margin-bottom: 5px;
 }
-
-
 
 .card {
     width: 60px;
@@ -170,28 +123,22 @@ button:hover {
     color: aliceblue;
 }
 
-
-.carac {
-    text-align: end;
-    margin-right: 15px;
-    font-size: 12px;
-    color: rgb(255, 255, 255);
+/* Add this CSS to your existing stylesheet */
+.message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* This will make it cover the full viewport height */
+    background-color: #333; /* Change to your desired background color */
 }
 
-
-.message {
-    margin-top: 10px;
-    font-size: 14px;
-    padding: 10px;
-    border-radius: 4px;
+#message {
+    font-size: 24px; /* Adjust the font size as needed */
+    color: white; /* Change the text color as needed */
+    margin-bottom: 20px; /* Optional: Add some space between the message and the image */
 }
 
-.error {
-    background-color: #f44336;
-    color: white;
-}
-
-.success {
-    background-color: #4caf50;
-    color: white;
+#message img {
+    display: block;
 }
