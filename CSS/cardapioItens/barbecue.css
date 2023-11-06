@@ -7,10 +7,9 @@
 }
 
 body {
-    background-image: url("../imagem/bg.jpg");
-    background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
-    background-repeat: no-repeat; /* Evita a repetição da imagem */
-    background-attachment: fixed; /* Mantém a imagem fixa enquanto a página rola */
+    background-color:  #fff079; 
+    margin: 0px;
+    padding: 0px;
 }
 
 .topnav {
@@ -47,12 +46,12 @@ body {
 }
 
 body h1 {
-    font-size: 80px;
+    font-size: 60px;
 }
 body h2 {
     margin-left: 30px;
     font-weight: normal;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .bbc img {
@@ -71,7 +70,7 @@ body h2 {
     
 }
 .ing h3{
-  font-size: 50px;
+  font-size: 20px;
 }
 
 .footer {

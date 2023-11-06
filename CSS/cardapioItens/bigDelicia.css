@@ -1,33 +1,63 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
     background-color:  #fff079; 
     margin: 0px;
     padding: 0px;
-    
 }
 
-.novo img {
-    width: 120px;
-    float:right;
-    margin-right: 140px;
+.topnav {
+    overflow: hidden;
+    background-color: #ff771e;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
 }
+
+.topnav a {
+    display: inline-block;
+    color: whitesmoke;
+    padding: 12px 26px;
+    text-decoration: none;
+    text-align: right;
+    font-size: 16pt;
+}
+
+.topnav a:hover {
+    background-color: rgb(255, 72, 0);
+    color: rgb(253, 253, 253);
+    border-bottom: solid 2px #ffff98;
+    border-radius: 11px;
+}
+
 .principal {
     padding-bottom: 400px;
     padding-top: 40px;
 }
+
 body h1 {
-    font-size: 80px;
+    font-size: 60px;
 }
 body h2 {
  
     margin-left: 30px;
     font-weight: normal;
-    font-size: 40px;
+    font-size: 30px;
 }
-
 
 .bigDel img {
     float: right;
-    width: 800px;
+    width: 680px;
     border-radius: 50px;
 }
 
@@ -35,13 +65,13 @@ body h2 {
     margin-top: 70px;
     margin-left: 10px;
     padding: 0px;
-    font-size: 30px;
+    font-size: 25px;
     text-align: start;
     
 }
 
 .ing h3{
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .topnav {
