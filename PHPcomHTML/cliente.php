@@ -33,7 +33,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/cliente.css">
     <link rel="stylesheet" href="../CSS/layout.css">
-    <title>Document</title>
+    <title>Finalizado!</title>
+     
+    <style>
+        .message-container {
+            background-color: #fff079;
+            /* Outros estilos desejados */
+        }
+    </style>
 </head>
 <body>
 <div class="message-container">
