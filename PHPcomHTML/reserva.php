@@ -34,7 +34,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/cliente.css">
     <link rel="stylesheet" href="../CSS/layout.css">
-    <title>Document</title>
+    <title>Finalizado!</title>
+    <style>
+        .message-container,
+        .message-container a { 
+            background-color: #fff079;
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
