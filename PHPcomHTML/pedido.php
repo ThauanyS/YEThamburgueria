@@ -49,16 +49,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+
     <nav class="topnav">
-        <a href="index.html">Home</a>
-        <a href="quem_somos.html">Quem somos</a>
-        <a href="cardapio.html">Cardápio</a>
-        <a href="promocao_do_dia.html">Promoção do Dia</a>
-        <a href="contato.html"> Contato</a>
-        <a href="pedido.html">Pedido</a>
-        <a href="reserva.html">Reserva</a>
-        <a href="cliente.html">Cliente</a>
+        <a href="../HTML/index.html">Home</a>
+        <a href="../HTML/quem_somos.html">Quem somos</a>
+        <a href="../HTML/cardapio.html">Cardápio</a>
+        <a href="../HTML/promocao_do_dia.html">Promoção do Dia</a>
+        <a href="../HTML/contato.html"> Contato</a>
+        <a href="../HTML/pedido.html">Pedido</a>
+        <a href="../HTML/reserva.html">Reserva</a>
+        <a href="../HTML/cliente.html">Cliente</a>
     </nav>
+    
     <div class="message-container">
         <?php if ($message !== '') { ?>
             <a id="message"><?php echo $message; ?></a>
