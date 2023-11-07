@@ -38,7 +38,7 @@ mysqli_close($_con);
     <title>Finalizado!</title> 
     <style>
         .message-container,  .message-container a {
-            background-color: #fff079;
+            background-color:darkorange;
             color: black;
             font-size: 50px;
             /* Outros estilos desejados */
@@ -47,6 +47,16 @@ mysqli_close($_con);
 </head>
 
 <body>
+<nav class="topnav">
+            <a href="index.html">Home</a>
+            <a href="quem_somos.html">Quem somos</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="promocao_do_dia.html">Promoção do Dia</a>
+            <a href="contato.html"> Contato</a>
+            <a href="pedido.html">Pedido</a>
+            <a href="reserva.html">Reserva</a>
+            <a href="cliente.html">Cliente</a>
+        </nav>
     <div class="message-container">
         <?php if ($message !== '') { ?>
             <a id="message"><?php echo $message; ?></a>
