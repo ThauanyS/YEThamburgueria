@@ -34,12 +34,14 @@ mysqli_close($_con);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/cliente.css">
     <link rel="stylesheet" href="../CSS/layout.css">
-    <title>Finalizado!</title>
+    <link rel="icon" href="../imagem/YTE.jpg">
+    <title>Finalizado!</title> 
     <style>
-        .message-container,
-        .message-container a {
+        .message-container,  .message-container a {
             background-color: #fff079;
             color: black;
+            font-size: 50px;
+            /* Outros estilos desejados */
         }
     </style>
 </head>
